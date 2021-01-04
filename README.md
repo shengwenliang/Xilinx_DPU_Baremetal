@@ -43,4 +43,4 @@ In this case, I will leverage the mobilenetv2 model as example to show how to ob
 
 6. Write the register of DPU, and read the interrupt register of DPU to check whether the task is completed. ![SDK](./image/SDK.png)
 
-7. The uart log ![UART](./image/UART.png)
+7. The uart log ![UART](./image/uart.png)
