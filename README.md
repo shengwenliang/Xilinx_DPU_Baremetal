@@ -39,7 +39,7 @@ In this case, I will leverage the mobilenetv2 model as example to show how to ob
 
 5. Write the input, instruction, and weight/bias binary file to DRAM via Xilinx SDK 2018.2.
 
-> In Xilinx SDK 2018.2, click Xilinx->Dump/Restore Data file, and write input, instruction, and weight/bias binary file to DRAM, the address is ```0x38700000, 0x38280000, and 0x38700000```
+> In Xilinx SDK 2018.2, click Xilinx->Dump/Restore Data file, and write input, instruction, and weight/bias binary file to DRAM, the address is ```0x38700000, 0x38280000, and 0x38300000```
 
 6. Write the register of DPU, and read the interrupt register of DPU to check whether the task is completed. ![SDK](./image/SDK.png)
 
