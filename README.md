@@ -1,4 +1,4 @@
-# Xilinx_DPU_Baremetal
+# Xilinx_DPU_Baremetal  [Chinese Version](./README_CN.md)
 The baremetal application for Xilinx DPU. 
 
 ## Prerequisites

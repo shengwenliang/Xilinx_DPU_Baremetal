@@ -88,7 +88,10 @@ sudo ./memdump2file 0x78700000 4096
 2. 将Ultra96 调整为JTAG启动模式，运行Xilinx SDK 2018.2， 利用hdf，创建一个hello world工程, 以及利用我们提供的源文件 将我们提供的源文件进行编译后，首先运行一个简单的hello world工程，此时，利用Xilinx SDK 2018.2提供的工具，点击菜单中的 Xilinx->Dump/Restore Data file 
 **input.bin, instruction.bin, weight.bin**三个文件，分别写到DRAM上对应的地址上，这里我设置的地址为0x38700000, 0x38280000, 0x38300000.
 
-3. 写入成功后，可以运行提供的SDK DPU工程，此时可以在putty获取串口打出的数据，当运行完成后，
+3. 写入成功后，可以运行提供的SDK DPU工程
+![SDK](./image/SDK.png)
+
+4. 此时可以在putty获取串口打出的数据，当运行完成后，
 ![UART](./image/uart.png)
 此时在XSCT Console中利用指令
 ```
