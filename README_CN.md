@@ -85,8 +85,16 @@ sudo ./memdump2file 0x78700000 4096
 
 1. 此时，我们首先利用vivado2018.2搭建DPU工程，生成bit流以及SDK对应的hdf文件，这里hdf文件我们已经提供在工程中.
 
-2. 将Ultra96 调整为JTAG启动模式，运行Xilinx SDK 2018.2， 利用hdf，创建一个hello world工程, 以及利用我们提供的源文件 将我们提供的源文件进行编译后，首先运行一个简单的hello world工程，此时，利用Xilinx SDK 2018.2提供的工具，将
-**input.bin, instruction.bin, weight.bin**三个文件，分别写到DRAM上，
+2. 将Ultra96 调整为JTAG启动模式，运行Xilinx SDK 2018.2， 利用hdf，创建一个hello world工程, 以及利用我们提供的源文件 将我们提供的源文件进行编译后，首先运行一个简单的hello world工程，此时，利用Xilinx SDK 2018.2提供的工具，点击菜单中的 Xilinx->Dump/Restore Data file 
+**input.bin, instruction.bin, weight.bin**三个文件，分别写到DRAM上对应的地址上，这里我设置的地址为0x38700000, 0x38280000, 0x38300000.
+
+3. 写入成功后，可以运行提供的SDK DPU工程，此时可以在putty获取串口打出的数据，当运行完成后，
+![UART](./image/uart.png)
+此时在XSCT Console中利用指令
+```
+mrd 0x38700500 16
+```
+即可读出对应的数值，则可以与output.bin中的数值进行比对。此时baremetal环境下利用DPU运行的过程基本就完成了
 
 
 
