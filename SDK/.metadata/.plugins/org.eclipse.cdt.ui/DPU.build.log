@@ -1,0 +1,30 @@
+09:47:40 **** Build of configuration Debug for project DPU ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../DPU_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:70:6: warning: unused variable 'j' [-Wunused-variable]
+  int j,u;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../DPU_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: DPU.elf'
+'Invoking: ARM v8 gcc linker'
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DPU_bsp/psu_cortexa53_0/lib -o "DPU.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: DPU.elf'
+' '
+'Invoking: ARM v8 Print Size'
+aarch64-none-elf-size DPU.elf  |tee "DPU.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  74992	   4600	  20776	 100368	  18810	DPU.elf
+'Finished building: DPU.elf.size'
+' '
+
+09:47:43 Build Finished (took 2s.540ms)
+

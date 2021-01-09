@@ -1,0 +1,1376 @@
+21:44:00 **** Clean-only build of configuration Debug for project DPU32 ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  DPU32.elf.size  DPU32.elf
+' '
+21:44:00 **** Clean-only build of project DPU32_bsp ****
+make -k clean 
+make -C psu_cortexa53_0/libsrc/avbuf_v2_2/src -s clean 
+make -C psu_cortexa53_0/libsrc/axipmon_v6_6/src -s clean 
+make -C psu_cortexa53_0/libsrc/coresightps_dcc_v1_4/src -s clean 
+make -C psu_cortexa53_0/libsrc/cpu_cortexa53_v1_5/src -s clean 
+make -C psu_cortexa53_0/libsrc/csudma_v1_2/src -s clean 
+make -C psu_cortexa53_0/libsrc/ddrcpsu_v1_1/src -s clean 
+make -C psu_cortexa53_0/libsrc/dpdma_v1_1/src -s clean 
+make -C psu_cortexa53_0/libsrc/gpiops_v3_3/src -s clean 
+make -C psu_cortexa53_0/libsrc/iicps_v3_7/src -s clean 
+make -C psu_cortexa53_0/libsrc/ipipsu_v2_3/src -s clean 
+make -C psu_cortexa53_0/libsrc/resetps_v1_1/src -s clean 
+make -C psu_cortexa53_0/libsrc/rtcpsu_v1_5/src -s clean 
+make -C psu_cortexa53_0/libsrc/scugic_v3_9/src -s clean 
+make -C psu_cortexa53_0/libsrc/sdps_v3_5/src -s clean 
+make -C psu_cortexa53_0/libsrc/spips_v3_1/src -s clean 
+make -C psu_cortexa53_0/libsrc/standalone_v6_7/src -s clean 
+make -C psu_cortexa53_0/libsrc/sysmonpsu_v2_4/src -s clean 
+make -C psu_cortexa53_0/libsrc/ttcps_v3_6/src -s clean 
+make -C psu_cortexa53_0/libsrc/uartps_v3_6/src -s clean 
+make -C psu_cortexa53_0/libsrc/usbpsu_v1_4/src -s clean 
+make -C psu_cortexa53_0/libsrc/video_common_v4_4/src -s clean 
+make -C psu_cortexa53_0/libsrc/wdtps_v3_0/src -s clean 
+make -C psu_cortexa53_0/libsrc/zdma_v1_5/src -s clean 
+rm -f psu_cortexa53_0/lib/libxil.a
+21:44:02 **** Build of project DPU32_bsp ****
+make -k all 
+"Running Make include in psu_cortexa53_0/libsrc/avbuf_v2_2/src"
+make -C psu_cortexa53_0/libsrc/avbuf_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/axipmon_v6_6/src"
+make -C psu_cortexa53_0/libsrc/axipmon_v6_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/coresightps_dcc_v1_4/src"
+make -C psu_cortexa53_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/cpu_cortexa53_v1_5/src"
+make -C psu_cortexa53_0/libsrc/cpu_cortexa53_v1_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/csudma_v1_2/src"
+make -C psu_cortexa53_0/libsrc/csudma_v1_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/ddrcpsu_v1_1/src"
+make -C psu_cortexa53_0/libsrc/ddrcpsu_v1_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/dpdma_v1_1/src"
+make -C psu_cortexa53_0/libsrc/dpdma_v1_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/gpiops_v3_3/src"
+make -C psu_cortexa53_0/libsrc/gpiops_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/iicps_v3_7/src"
+make -C psu_cortexa53_0/libsrc/iicps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/ipipsu_v2_3/src"
+make -C psu_cortexa53_0/libsrc/ipipsu_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/resetps_v1_1/src"
+make -C psu_cortexa53_0/libsrc/resetps_v1_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/rtcpsu_v1_5/src"
+make -C psu_cortexa53_0/libsrc/rtcpsu_v1_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/scugic_v3_9/src"
+make -C psu_cortexa53_0/libsrc/scugic_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/sdps_v3_5/src"
+make -C psu_cortexa53_0/libsrc/sdps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/spips_v3_1/src"
+make -C psu_cortexa53_0/libsrc/spips_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/standalone_v6_7/src"
+make -C psu_cortexa53_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/sysmonpsu_v2_4/src"
+make -C psu_cortexa53_0/libsrc/sysmonpsu_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/ttcps_v3_6/src"
+make -C psu_cortexa53_0/libsrc/ttcps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/uartps_v3_6/src"
+make -C psu_cortexa53_0/libsrc/uartps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/usbpsu_v1_4/src"
+make -C psu_cortexa53_0/libsrc/usbpsu_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/video_common_v4_4/src"
+make -C psu_cortexa53_0/libsrc/video_common_v4_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/wdtps_v3_0/src"
+make -C psu_cortexa53_0/libsrc/wdtps_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/zdma_v1_5/src"
+make -C psu_cortexa53_0/libsrc/zdma_v1_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make libs in psu_cortexa53_0/libsrc/avbuf_v2_2/src"
+make -C psu_cortexa53_0/libsrc/avbuf_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling avbuf"
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in psu_cortexa53_0/libsrc/axipmon_v6_6/src"
+make -C psu_cortexa53_0/libsrc/axipmon_v6_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling axipmon"
+"Running Make libs in psu_cortexa53_0/libsrc/coresightps_dcc_v1_4/src"
+make -C psu_cortexa53_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling coresightps_dcc"
+"Running Make libs in psu_cortexa53_0/libsrc/cpu_cortexa53_v1_5/src"
+make -C psu_cortexa53_0/libsrc/cpu_cortexa53_v1_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling cpu_cortexa53"
+"Running Make libs in psu_cortexa53_0/libsrc/csudma_v1_2/src"
+make -C psu_cortexa53_0/libsrc/csudma_v1_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling csudma"
+"Running Make libs in psu_cortexa53_0/libsrc/ddrcpsu_v1_1/src"
+make -C psu_cortexa53_0/libsrc/ddrcpsu_v1_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling ddrcpsu"
+"Running Make libs in psu_cortexa53_0/libsrc/dpdma_v1_1/src"
+make -C psu_cortexa53_0/libsrc/dpdma_v1_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling dpdma"
+"Running Make libs in psu_cortexa53_0/libsrc/gpiops_v3_3/src"
+make -C psu_cortexa53_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling gpiops"
+"Running Make libs in psu_cortexa53_0/libsrc/iicps_v3_7/src"
+make -C psu_cortexa53_0/libsrc/iicps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling iicps"
+"Running Make libs in psu_cortexa53_0/libsrc/ipipsu_v2_3/src"
+make -C psu_cortexa53_0/libsrc/ipipsu_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling ipipsu"
+"Running Make libs in psu_cortexa53_0/libsrc/resetps_v1_1/src"
+make -C psu_cortexa53_0/libsrc/resetps_v1_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling resetps"
+xresetps.c: In function 'XResetPs_ResetAssert':
+xresetps.c:762:12: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+   (ResetID < XRESETPS_RSTID_START)) {
+            ^
+xresetps.c: In function 'XResetPs_ResetDeassert':
+xresetps.c:820:12: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+   (ResetID < XRESETPS_RSTID_START)) {
+            ^
+xresetps.c: In function 'XResetPs_ResetPulse':
+xresetps.c:877:12: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+   (ResetID < XRESETPS_RSTID_START)) {
+            ^
+xresetps.c: In function 'XResetPs_ResetStatus':
+xresetps.c:982:12: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+   (ResetID < XRESETPS_RSTID_START)) {
+            ^
+"Running Make libs in psu_cortexa53_0/libsrc/rtcpsu_v1_5/src"
+make -C psu_cortexa53_0/libsrc/rtcpsu_v1_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling rtcpsu"
+"Running Make libs in psu_cortexa53_0/libsrc/scugic_v3_9/src"
+make -C psu_cortexa53_0/libsrc/scugic_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling scugic"
+"Running Make libs in psu_cortexa53_0/libsrc/sdps_v3_5/src"
+make -C psu_cortexa53_0/libsrc/sdps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling sdps"
+"Running Make libs in psu_cortexa53_0/libsrc/spips_v3_1/src"
+make -C psu_cortexa53_0/libsrc/spips_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling spips"
+"Running Make libs in psu_cortexa53_0/libsrc/standalone_v6_7/src"
+make -C psu_cortexa53_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling standalone"
+In file included from sleep.c:62:0:
+xtime_l.h:85:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from usleep.c:62:0:
+xtime_l.h:85:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+xil_cache.c: In function 'Xil_DCacheInvalidate':
+xil_cache.c:143:80: warning: unused variable 'CacheLevelIndex' [-Wunused-variable]
+  u32 Way, WayIndex,WayAdjust, Set, SetIndex, NumSet, NumCacheLevel, CacheLevel,CacheLevelIndex;
+                                                                                ^~~~~~~~~~~~~~~
+xil_cache.c:143:54: warning: variable 'NumCacheLevel' set but not used [-Wunused-but-set-variable]
+  u32 Way, WayIndex,WayAdjust, Set, SetIndex, NumSet, NumCacheLevel, CacheLevel,CacheLevelIndex;
+                                                      ^~~~~~~~~~~~~
+xil_cache.c: In function 'Xil_DCacheFlush':
+xil_cache.c:356:80: warning: unused variable 'CacheLevelIndex' [-Wunused-variable]
+  u32 Way, WayIndex,WayAdjust, Set, SetIndex, NumSet, NumCacheLevel, CacheLevel,CacheLevelIndex;
+                                                                                ^~~~~~~~~~~~~~~
+xil_cache.c:356:54: warning: variable 'NumCacheLevel' set but not used [-Wunused-but-set-variable]
+  u32 Way, WayIndex,WayAdjust, Set, SetIndex, NumSet, NumCacheLevel, CacheLevel,CacheLevelIndex;
+                                                      ^~~~~~~~~~~~~
+In file included from xil_sleeptimer.c:55:0:
+xtime_l.h:85:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xtime_l.c:55:0:
+xtime_l.h:85:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+"Running Make libs in psu_cortexa53_0/libsrc/sysmonpsu_v2_4/src"
+make -C psu_cortexa53_0/libsrc/sysmonpsu_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling sysmonpsu"
+"Running Make libs in psu_cortexa53_0/libsrc/ttcps_v3_6/src"
+make -C psu_cortexa53_0/libsrc/ttcps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling ttcps"
+"Running Make libs in psu_cortexa53_0/libsrc/uartps_v3_6/src"
+make -C psu_cortexa53_0/libsrc/uartps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling uartps"
+"Running Make libs in psu_cortexa53_0/libsrc/usbpsu_v1_4/src"
+make -C psu_cortexa53_0/libsrc/usbpsu_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling usbpsu"
+"Running Make libs in psu_cortexa53_0/libsrc/video_common_v4_4/src"
+make -C psu_cortexa53_0/libsrc/video_common_v4_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling video_common"
+"Running Make libs in psu_cortexa53_0/libsrc/wdtps_v3_0/src"
+make -C psu_cortexa53_0/libsrc/wdtps_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling wdtps"
+"Running Make libs in psu_cortexa53_0/libsrc/zdma_v1_5/src"
+make -C psu_cortexa53_0/libsrc/zdma_v1_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling zdma"
+'Finished building libraries'
+21:44:34 **** Build of configuration Debug for project DPU32 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 32 Bit gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard -I../../DPU32_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:63:7: warning: implicit declaration of function 'Xil_SetTlbAttributes' [-Wimplicit-function-declaration]
+       Xil_SetTlbAttributes(u * MB, 0xC1E); // cached & buffered
+       ^~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v8 32 Bit gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard -I../../DPU32_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: DPU32.elf'
+'Invoking: ARM v8 32 Bit gcc linker'
+arm-none-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DPU32_bsp/psu_cortexa53_0/lib -o "DPU32.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+e:/xilinx2018/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ./src/helloworld.o uses VFP register arguments, DPU32.elf does not
+e:/xilinx2018/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ./src/helloworld.o
+e:/xilinx2018/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ./src/platform.o uses VFP register arguments, DPU32.elf does not
+e:/xilinx2018/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ./src/platform.o
+e:/xilinx2018/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../../DPU32_bsp/psu_cortexa53_0/lib\libxil.a(print.o) uses VFP register arguments, DPU32.elf does not
+e:/xilinx2018/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../DPU32_bsp/psu_cortexa53_0/lib\libxil.a(print.o)
+e:/xilinx2018/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../../DPU32_bsp/psu_cortexa53_0/lib\libxil.a(xil_mmu.o) uses VFP register arguments, DPU32.elf does not
+e:/xilinx2018/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../DPU32_bsp/psu_cortexa53_0/lib\libxil.a(xil_mmu.o)
+e:/xilinx2018/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../../DPU32_bsp/psu_cortexa53_0/lib\libxil.a(outbyte.o) uses VFP register arguments, DPU32.elf does not
+e:/xilinx2018/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../DPU32_bsp/psu_cortexa53_0/lib\libxil.a(outbyte.o)
+e:/xilinx2018/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../../DPU32_bsp/psu_cortexa53_0/lib\libxil.a(vectors.o) uses VFP register arguments, DPU32.elf does not
+e:/xilinx2018/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../DPU32_bsp/psu_cortexa53_0/lib\libxil.a(vectors.o)
+e:/xilinx2018/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../../DPU32_bsp/psu_cortexa53_0/lib\libxil.a(xil_cache.o) uses VFP register arguments, DPU32.elf does not
+e:/xilinx2018/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../DPU32_bsp/psu_cortexa53_0/lib\libxil.a(xil_cache.o)
+e:/xilinx2018/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../../DPU32_bsp/psu_cortexa53_0/lib\libxil.a(xil_exception.o) uses VFP register arguments, DPU32.elf does not
+e:/xilinx2018/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../DPU32_bsp/psu_cortexa53_0/lib\libxil.a(xil_exception.o)
+e:/xilinx2018/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../../DPU32_bsp/psu_cortexa53_0/lib\libxil.a(xuartps_hw.o) uses VFP register arguments, DPU32.elf does not
+e:/xilinx2018/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../DPU32_bsp/psu_cortexa53_0/lib\libxil.a(xuartps_hw.o)
+e:/xilinx2018/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../../DPU32_bsp/psu_cortexa53_0/lib\libxil.a(_exit.o) uses VFP register arguments, DPU32.elf does not
+e:/xilinx2018/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../DPU32_bsp/psu_cortexa53_0/lib\libxil.a(_exit.o)
+collect2.exe: error: ld returned 1 exit status
+make: *** [DPU32.elf] ´íÎó 1
+21:45:13 **** Build of configuration Debug for project DPUTest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 32 Bit gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard -I../../DPU32_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v8 32 Bit gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard -I../../DPU32_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: DPUTest.elf'
+'Invoking: ARM v8 32 Bit gcc linker'
+arm-none-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DPU32_bsp/psu_cortexa53_0/lib -o "DPUTest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard
+'Finished building target: DPUTest.elf'
+' '
+'Invoking: ARM v8 32 Bit Print Size'
+arm-none-eabi-size DPUTest.elf  |tee "DPUTest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19620	   1144	  22576	  43340	   a94c	DPUTest.elf
+'Finished building: DPUTest.elf.size'
+' '
+21:45:37 **** Auto Build of configuration Debug for project DPUTest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 32 Bit gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard -I../../DPU32_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:63:7: warning: implicit declaration of function 'Xil_SetTlbAttributes' [-Wimplicit-function-declaration]
+       Xil_SetTlbAttributes(u * MB, 0xC1E); // cached & buffered
+       ^~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: DPUTest.elf'
+'Invoking: ARM v8 32 Bit gcc linker'
+arm-none-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DPU32_bsp/psu_cortexa53_0/lib -o "DPUTest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard
+'Finished building target: DPUTest.elf'
+' '
+'Invoking: ARM v8 32 Bit Print Size'
+arm-none-eabi-size DPUTest.elf  |tee "DPUTest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21172	   1144	  22576	  44892	   af5c	DPUTest.elf
+'Finished building: DPUTest.elf.size'
+' '
+21:45:52 **** Incremental Build of configuration Debug for project DPUTest ****
+make all 
+make: Nothing to be done for `all'.
+21:46:06 **** Auto Build of configuration Debug for project DPUTest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 32 Bit gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard -I../../DPU32_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:63:7: warning: implicit declaration of function 'Xil_SetTlbAttributes' [-Wimplicit-function-declaration]
+       Xil_SetTlbAttributes(u * MB, 0xC1E); // cached & buffered
+       ^~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: DPUTest.elf'
+'Invoking: ARM v8 32 Bit gcc linker'
+arm-none-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DPU32_bsp/psu_cortexa53_0/lib -o "DPUTest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard
+'Finished building target: DPUTest.elf'
+' '
+'Invoking: ARM v8 32 Bit Print Size'
+arm-none-eabi-size DPUTest.elf  |tee "DPUTest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21204	   1144	  22576	  44924	   af7c	DPUTest.elf
+'Finished building: DPUTest.elf.size'
+' '
+21:46:11 **** Incremental Build of configuration Debug for project DPUTest ****
+make all 
+make: Nothing to be done for `all'.
+21:46:22 **** Incremental Build of configuration Debug for project DPUTest ****
+make all 
+make: Nothing to be done for `all'.
+21:47:02 **** Auto Build of configuration Debug for project DPUTest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 32 Bit gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard -I../../DPU32_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:63:7: warning: implicit declaration of function 'Xil_SetTlbAttributes' [-Wimplicit-function-declaration]
+       Xil_SetTlbAttributes(u * MB, 0xC1E); // cached & buffered
+       ^~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:74:5: warning: implicit declaration of function 'IO_WRITE32' [-Wimplicit-function-declaration]
+     IO_WRITE32(XPAR_DPU_EU_0_BASEADDR+0x004, 0x00000000);
+     ^~~~~~~~~~
+../src/helloworld.c:90:16: warning: implicit declaration of function 'IO_READ32' [-Wimplicit-function-declaration]
+      message = IO_READ32(XPAR_DPU_EU_0_BASEADDR+0x220);
+                ^~~~~~~~~
+../src/helloworld.c:96:5: warning: implicit declaration of function 'Xil_DCacheFlushRange' [-Wimplicit-function-declaration]
+     Xil_DCacheFlushRange((u32)(0x38700500), 20480);
+     ^~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:102:17: error: expected ')' before 'PRIi8'
+      printf("%" PRIi8 " ", result[u]);
+                 ^~~~~
+../src/helloworld.c:102:14: warning: spurious trailing '%' in format [-Wformat=]
+      printf("%" PRIi8 " ", result[u]);
+              ^
+make: *** [src/helloworld.o] ´íÎó 1
+21:47:12 **** Auto Build of configuration Debug for project DPUTest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 32 Bit gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard -I../../DPU32_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:63:7: warning: implicit declaration of function 'Xil_SetTlbAttributes' [-Wimplicit-function-declaration]
+       Xil_SetTlbAttributes(u * MB, 0xC1E); // cached & buffered
+       ^~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:74:5: warning: implicit declaration of function 'IO_WRITE32' [-Wimplicit-function-declaration]
+     IO_WRITE32(XPAR_DPU_EU_0_BASEADDR+0x004, 0x00000000);
+     ^~~~~~~~~~
+../src/helloworld.c:90:16: warning: implicit declaration of function 'IO_READ32' [-Wimplicit-function-declaration]
+      message = IO_READ32(XPAR_DPU_EU_0_BASEADDR+0x220);
+                ^~~~~~~~~
+../src/helloworld.c:96:5: warning: implicit declaration of function 'Xil_DCacheFlushRange' [-Wimplicit-function-declaration]
+     Xil_DCacheFlushRange((u32)(0x38700500), 20480);
+     ^~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: DPUTest.elf'
+'Invoking: ARM v8 32 Bit gcc linker'
+arm-none-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DPU32_bsp/psu_cortexa53_0/lib -o "DPUTest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard
+./src/helloworld.o: In function `main':
+E:\DPU_OpenSSD\Baremetal\SDK\DPUTest\Debug/../src/helloworld.c:74: undefined reference to `IO_WRITE32'
+E:\DPU_OpenSSD\Baremetal\SDK\DPUTest\Debug/../src/helloworld.c:76: undefined reference to `IO_WRITE32'
+E:\DPU_OpenSSD\Baremetal\SDK\DPUTest\Debug/../src/helloworld.c:81: undefined reference to `IO_WRITE32'
+E:\DPU_OpenSSD\Baremetal\SDK\DPUTest\Debug/../src/helloworld.c:82: undefined reference to `IO_WRITE32'
+E:\DPU_OpenSSD\Baremetal\SDK\DPUTest\Debug/../src/helloworld.c:83: undefined reference to `IO_WRITE32'
+./src/helloworld.o:E:\DPU_OpenSSD\Baremetal\SDK\DPUTest\Debug/../src/helloworld.c:85: more undefined references to `IO_WRITE32' follow
+./src/helloworld.o: In function `main':
+E:\DPU_OpenSSD\Baremetal\SDK\DPUTest\Debug/../src/helloworld.c:90: undefined reference to `IO_READ32'
+collect2.exe: error: ld returned 1 exit status
+make: *** [DPUTest.elf] ´íÎó 1
+21:47:35 **** Auto Build of configuration Debug for project DPUTest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 32 Bit gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard -I../../DPU32_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:70:5: warning: implicit declaration of function 'init_platform' [-Wimplicit-function-declaration]
+     init_platform();
+     ^~~~~~~~~~~~~
+../src/helloworld.c:122:5: warning: implicit declaration of function 'cleanup_platform' [-Wimplicit-function-declaration]
+     cleanup_platform();
+     ^~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: DPUTest.elf'
+'Invoking: ARM v8 32 Bit gcc linker'
+arm-none-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DPU32_bsp/psu_cortexa53_0/lib -o "DPUTest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard
+'Finished building target: DPUTest.elf'
+' '
+'Invoking: ARM v8 32 Bit Print Size'
+arm-none-eabi-size DPUTest.elf  |tee "DPUTest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72416	   2580	  23328	  98324	  18014	DPUTest.elf
+'Finished building: DPUTest.elf.size'
+' '
+21:47:54 **** Incremental Build of configuration Debug for project DPUTest ****
+make all 
+make: Nothing to be done for `all'.
+21:49:11 **** Auto Build of configuration Debug for project DPUTest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 32 Bit gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard -I../../DPU32_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:70:5: warning: implicit declaration of function 'init_platform' [-Wimplicit-function-declaration]
+     init_platform();
+     ^~~~~~~~~~~~~
+../src/helloworld.c:122:5: warning: implicit declaration of function 'cleanup_platform' [-Wimplicit-function-declaration]
+     cleanup_platform();
+     ^~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: DPUTest.elf'
+'Invoking: ARM v8 32 Bit gcc linker'
+arm-none-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DPU32_bsp/psu_cortexa53_0/lib -o "DPUTest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard
+'Finished building target: DPUTest.elf'
+' '
+'Invoking: ARM v8 32 Bit Print Size'
+arm-none-eabi-size DPUTest.elf  |tee "DPUTest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72480	   2580	  23328	  98388	  18054	DPUTest.elf
+'Finished building: DPUTest.elf.size'
+' '
+21:49:31 **** Incremental Build of configuration Debug for project DPUTest ****
+make all 
+make: Nothing to be done for `all'.
+21:49:58 **** Incremental Build of configuration Debug for project DPUTest ****
+make all 
+make: Nothing to be done for `all'.
+21:50:53 **** Auto Build of configuration Debug for project DPUTest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 32 Bit gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard -I../../DPU32_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:70:5: warning: implicit declaration of function 'init_platform' [-Wimplicit-function-declaration]
+     init_platform();
+     ^~~~~~~~~~~~~
+../src/helloworld.c:123:5: warning: implicit declaration of function 'cleanup_platform' [-Wimplicit-function-declaration]
+     cleanup_platform();
+     ^~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: DPUTest.elf'
+'Invoking: ARM v8 32 Bit gcc linker'
+arm-none-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DPU32_bsp/psu_cortexa53_0/lib -o "DPUTest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard
+'Finished building target: DPUTest.elf'
+' '
+'Invoking: ARM v8 32 Bit Print Size'
+arm-none-eabi-size DPUTest.elf  |tee "DPUTest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72480	   2580	  23328	  98388	  18054	DPUTest.elf
+'Finished building: DPUTest.elf.size'
+' '
+21:53:12 **** Auto Build of configuration Debug for project DPUTest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 32 Bit gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard -I../../DPU32_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:70:5: warning: implicit declaration of function 'init_platform' [-Wimplicit-function-declaration]
+     init_platform();
+     ^~~~~~~~~~~~~
+../src/helloworld.c:122:5: warning: implicit declaration of function 'cleanup_platform' [-Wimplicit-function-declaration]
+     cleanup_platform();
+     ^~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: DPUTest.elf'
+'Invoking: ARM v8 32 Bit gcc linker'
+arm-none-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DPU32_bsp/psu_cortexa53_0/lib -o "DPUTest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard
+'Finished building target: DPUTest.elf'
+' '
+'Invoking: ARM v8 32 Bit Print Size'
+arm-none-eabi-size DPUTest.elf  |tee "DPUTest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72480	   2580	  23328	  98388	  18054	DPUTest.elf
+'Finished building: DPUTest.elf.size'
+' '
+21:53:29 **** Auto Build of configuration Debug for project DPUTest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 32 Bit gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard -I../../DPU32_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:70:5: warning: implicit declaration of function 'init_platform' [-Wimplicit-function-declaration]
+     init_platform();
+     ^~~~~~~~~~~~~
+../src/helloworld.c:122:5: warning: implicit declaration of function 'cleanup_platform' [-Wimplicit-function-declaration]
+     cleanup_platform();
+     ^~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: DPUTest.elf'
+'Invoking: ARM v8 32 Bit gcc linker'
+arm-none-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DPU32_bsp/psu_cortexa53_0/lib -o "DPUTest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard
+'Finished building target: DPUTest.elf'
+' '
+'Invoking: ARM v8 32 Bit Print Size'
+arm-none-eabi-size DPUTest.elf  |tee "DPUTest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72416	   2580	  23328	  98324	  18014	DPUTest.elf
+'Finished building: DPUTest.elf.size'
+' '
+21:53:45 **** Incremental Build of configuration Debug for project DPUTest ****
+make all 
+make: Nothing to be done for `all'.
+21:55:11 **** Auto Build of configuration Debug for project DPUTest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 32 Bit gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard -I../../DPU32_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:70:5: warning: implicit declaration of function 'init_platform' [-Wimplicit-function-declaration]
+     init_platform();
+     ^~~~~~~~~~~~~
+../src/helloworld.c:122:5: warning: implicit declaration of function 'cleanup_platform' [-Wimplicit-function-declaration]
+     cleanup_platform();
+     ^~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: DPUTest.elf'
+'Invoking: ARM v8 32 Bit gcc linker'
+arm-none-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DPU32_bsp/psu_cortexa53_0/lib -o "DPUTest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard
+'Finished building target: DPUTest.elf'
+' '
+'Invoking: ARM v8 32 Bit Print Size'
+arm-none-eabi-size DPUTest.elf  |tee "DPUTest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72672	   2580	  23328	  98580	  18114	DPUTest.elf
+'Finished building: DPUTest.elf.size'
+' '
+21:55:21 **** Auto Build of configuration Debug for project DPUTest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 32 Bit gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard -I../../DPU32_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:70:5: warning: implicit declaration of function 'init_platform' [-Wimplicit-function-declaration]
+     init_platform();
+     ^~~~~~~~~~~~~
+../src/helloworld.c:122:5: warning: implicit declaration of function 'cleanup_platform' [-Wimplicit-function-declaration]
+     cleanup_platform();
+     ^~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: DPUTest.elf'
+'Invoking: ARM v8 32 Bit gcc linker'
+arm-none-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DPU32_bsp/psu_cortexa53_0/lib -o "DPUTest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard
+'Finished building target: DPUTest.elf'
+' '
+'Invoking: ARM v8 32 Bit Print Size'
+arm-none-eabi-size DPUTest.elf  |tee "DPUTest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72672	   2580	  23328	  98580	  18114	DPUTest.elf
+'Finished building: DPUTest.elf.size'
+' '
+21:55:37 **** Incremental Build of configuration Debug for project DPUTest ****
+make all 
+make: Nothing to be done for `all'.
+21:56:15 **** Auto Build of configuration Debug for project DPUTest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 32 Bit gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard -I../../DPU32_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:70:5: warning: implicit declaration of function 'init_platform' [-Wimplicit-function-declaration]
+     init_platform();
+     ^~~~~~~~~~~~~
+../src/helloworld.c:122:5: warning: implicit declaration of function 'cleanup_platform' [-Wimplicit-function-declaration]
+     cleanup_platform();
+     ^~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: DPUTest.elf'
+'Invoking: ARM v8 32 Bit gcc linker'
+arm-none-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DPU32_bsp/psu_cortexa53_0/lib -o "DPUTest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard
+'Finished building target: DPUTest.elf'
+' '
+'Invoking: ARM v8 32 Bit Print Size'
+arm-none-eabi-size DPUTest.elf  |tee "DPUTest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72416	   2580	  23328	  98324	  18014	DPUTest.elf
+'Finished building: DPUTest.elf.size'
+' '
+21:56:28 **** Incremental Build of configuration Debug for project DPUTest ****
+make all 
+make: Nothing to be done for `all'.
+21:56:52 **** Incremental Build of configuration Debug for project DPUTest ****
+make all 
+make: Nothing to be done for `all'.
+21:56:53 **** Incremental Build of configuration Debug for project DPU ****
+make all 
+make: Nothing to be done for `all'.
+21:59:34 **** Auto Build of configuration Debug for project DPUTest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 32 Bit gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard -I../../DPU32_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:70:5: warning: implicit declaration of function 'init_platform' [-Wimplicit-function-declaration]
+     init_platform();
+     ^~~~~~~~~~~~~
+../src/helloworld.c:73:18: warning: unused variable 'u' [-Wunused-variable]
+     unsigned int u;
+                  ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: DPUTest.elf'
+'Invoking: ARM v8 32 Bit gcc linker'
+arm-none-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DPU32_bsp/psu_cortexa53_0/lib -o "DPUTest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard
+'Finished building target: DPUTest.elf'
+' '
+'Invoking: ARM v8 32 Bit Print Size'
+arm-none-eabi-size DPUTest.elf  |tee "DPUTest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19616	   1144	  22576	  43336	   a948	DPUTest.elf
+'Finished building: DPUTest.elf.size'
+' '
+21:59:40 **** Incremental Build of configuration Debug for project DPUTest ****
+make all 
+make: Nothing to be done for `all'.
+22:00:09 **** Incremental Build of configuration Debug for project DPUTest ****
+make all 
+make: Nothing to be done for `all'.
+22:02:48 **** Auto Build of configuration Debug for project DPUTest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 32 Bit gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard -I../../DPU32_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: DPUTest.elf'
+'Invoking: ARM v8 32 Bit gcc linker'
+arm-none-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DPU32_bsp/psu_cortexa53_0/lib -o "DPUTest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard
+'Finished building target: DPUTest.elf'
+' '
+'Invoking: ARM v8 32 Bit Print Size'
+arm-none-eabi-size DPUTest.elf  |tee "DPUTest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72672	   2580	  23328	  98580	  18114	DPUTest.elf
+'Finished building: DPUTest.elf.size'
+' '
+22:05:46 **** Incremental Build of configuration Debug for project DPUTest ****
+make all 
+make: Nothing to be done for `all'.
+22:06:37 **** Auto Build of configuration Debug for project DPUTest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 32 Bit gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard -I../../DPU32_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: DPUTest.elf'
+'Invoking: ARM v8 32 Bit gcc linker'
+arm-none-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DPU32_bsp/psu_cortexa53_0/lib -o "DPUTest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard
+'Finished building target: DPUTest.elf'
+' '
+'Invoking: ARM v8 32 Bit Print Size'
+arm-none-eabi-size DPUTest.elf  |tee "DPUTest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72416	   2580	  23328	  98324	  18014	DPUTest.elf
+'Finished building: DPUTest.elf.size'
+' '
+22:06:59 **** Incremental Build of configuration Debug for project DPUTest ****
+make all 
+make: Nothing to be done for `all'.
+09:46:13 **** Clean-only build of project DPU32_bsp ****
+make -k clean 
+make -C psu_cortexa53_0/libsrc/avbuf_v2_2/src -s clean 
+make -C psu_cortexa53_0/libsrc/axipmon_v6_6/src -s clean 
+make -C psu_cortexa53_0/libsrc/coresightps_dcc_v1_4/src -s clean 
+make -C psu_cortexa53_0/libsrc/cpu_cortexa53_v1_5/src -s clean 
+make -C psu_cortexa53_0/libsrc/csudma_v1_2/src -s clean 
+make -C psu_cortexa53_0/libsrc/ddrcpsu_v1_1/src -s clean 
+make -C psu_cortexa53_0/libsrc/dpdma_v1_1/src -s clean 
+make -C psu_cortexa53_0/libsrc/gpiops_v3_3/src -s clean 
+make -C psu_cortexa53_0/libsrc/iicps_v3_7/src -s clean 
+make -C psu_cortexa53_0/libsrc/ipipsu_v2_3/src -s clean 
+make -C psu_cortexa53_0/libsrc/resetps_v1_1/src -s clean 
+make -C psu_cortexa53_0/libsrc/rtcpsu_v1_5/src -s clean 
+make -C psu_cortexa53_0/libsrc/scugic_v3_9/src -s clean 
+make -C psu_cortexa53_0/libsrc/sdps_v3_5/src -s clean 
+make -C psu_cortexa53_0/libsrc/spips_v3_1/src -s clean 
+make -C psu_cortexa53_0/libsrc/standalone_v6_7/src -s clean 
+make -C psu_cortexa53_0/libsrc/sysmonpsu_v2_4/src -s clean 
+make -C psu_cortexa53_0/libsrc/ttcps_v3_6/src -s clean 
+make -C psu_cortexa53_0/libsrc/uartps_v3_6/src -s clean 
+make -C psu_cortexa53_0/libsrc/usbpsu_v1_4/src -s clean 
+make -C psu_cortexa53_0/libsrc/video_common_v4_4/src -s clean 
+make -C psu_cortexa53_0/libsrc/wdtps_v3_0/src -s clean 
+make -C psu_cortexa53_0/libsrc/zdma_v1_5/src -s clean 
+rm -f psu_cortexa53_0/lib/libxil.a
+09:46:16 **** Clean-only build of project DPU_bsp ****
+make -k clean 
+make -C psu_cortexa53_0/libsrc/avbuf_v2_2/src -s clean 
+make -C psu_cortexa53_0/libsrc/axipmon_v6_6/src -s clean 
+make -C psu_cortexa53_0/libsrc/coresightps_dcc_v1_4/src -s clean 
+make -C psu_cortexa53_0/libsrc/cpu_cortexa53_v1_5/src -s clean 
+make -C psu_cortexa53_0/libsrc/csudma_v1_2/src -s clean 
+make -C psu_cortexa53_0/libsrc/ddrcpsu_v1_1/src -s clean 
+make -C psu_cortexa53_0/libsrc/dpdma_v1_1/src -s clean 
+make -C psu_cortexa53_0/libsrc/gpiops_v3_3/src -s clean 
+make -C psu_cortexa53_0/libsrc/iicps_v3_7/src -s clean 
+make -C psu_cortexa53_0/libsrc/ipipsu_v2_3/src -s clean 
+make -C psu_cortexa53_0/libsrc/resetps_v1_1/src -s clean 
+make -C psu_cortexa53_0/libsrc/rtcpsu_v1_5/src -s clean 
+make -C psu_cortexa53_0/libsrc/scugic_v3_9/src -s clean 
+make -C psu_cortexa53_0/libsrc/sdps_v3_5/src -s clean 
+make -C psu_cortexa53_0/libsrc/spips_v3_1/src -s clean 
+make -C psu_cortexa53_0/libsrc/standalone_v6_7/src -s clean 
+make -C psu_cortexa53_0/libsrc/sysmonpsu_v2_4/src -s clean 
+make -C psu_cortexa53_0/libsrc/ttcps_v3_6/src -s clean 
+make -C psu_cortexa53_0/libsrc/uartps_v3_6/src -s clean 
+make -C psu_cortexa53_0/libsrc/usbpsu_v1_4/src -s clean 
+make -C psu_cortexa53_0/libsrc/video_common_v4_4/src -s clean 
+make -C psu_cortexa53_0/libsrc/wdtps_v3_0/src -s clean 
+make -C psu_cortexa53_0/libsrc/zdma_v1_5/src -s clean 
+rm -f psu_cortexa53_0/lib/libxil.a
+09:46:18 **** Clean-only build of configuration Debug for project DPUTest ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  DPUTest.elf.size  DPUTest.elf
+' '
+09:46:19 **** Clean-only build of configuration Debug for project DPU ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  DPU.elf.size  DPU.elf
+' '
+09:46:19 **** Build of project DPU32_bsp ****
+make -k all 
+"Running Make include in psu_cortexa53_0/libsrc/avbuf_v2_2/src"
+make -C psu_cortexa53_0/libsrc/avbuf_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/axipmon_v6_6/src"
+make -C psu_cortexa53_0/libsrc/axipmon_v6_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/coresightps_dcc_v1_4/src"
+make -C psu_cortexa53_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/cpu_cortexa53_v1_5/src"
+make -C psu_cortexa53_0/libsrc/cpu_cortexa53_v1_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/csudma_v1_2/src"
+make -C psu_cortexa53_0/libsrc/csudma_v1_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/ddrcpsu_v1_1/src"
+make -C psu_cortexa53_0/libsrc/ddrcpsu_v1_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/dpdma_v1_1/src"
+make -C psu_cortexa53_0/libsrc/dpdma_v1_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/gpiops_v3_3/src"
+make -C psu_cortexa53_0/libsrc/gpiops_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/iicps_v3_7/src"
+make -C psu_cortexa53_0/libsrc/iicps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/ipipsu_v2_3/src"
+make -C psu_cortexa53_0/libsrc/ipipsu_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/resetps_v1_1/src"
+make -C psu_cortexa53_0/libsrc/resetps_v1_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/rtcpsu_v1_5/src"
+make -C psu_cortexa53_0/libsrc/rtcpsu_v1_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/scugic_v3_9/src"
+make -C psu_cortexa53_0/libsrc/scugic_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/sdps_v3_5/src"
+make -C psu_cortexa53_0/libsrc/sdps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/spips_v3_1/src"
+make -C psu_cortexa53_0/libsrc/spips_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/standalone_v6_7/src"
+make -C psu_cortexa53_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/sysmonpsu_v2_4/src"
+make -C psu_cortexa53_0/libsrc/sysmonpsu_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/ttcps_v3_6/src"
+make -C psu_cortexa53_0/libsrc/ttcps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/uartps_v3_6/src"
+make -C psu_cortexa53_0/libsrc/uartps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/usbpsu_v1_4/src"
+make -C psu_cortexa53_0/libsrc/usbpsu_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/video_common_v4_4/src"
+make -C psu_cortexa53_0/libsrc/video_common_v4_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/wdtps_v3_0/src"
+make -C psu_cortexa53_0/libsrc/wdtps_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make include in psu_cortexa53_0/libsrc/zdma_v1_5/src"
+make -C psu_cortexa53_0/libsrc/zdma_v1_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Running Make libs in psu_cortexa53_0/libsrc/avbuf_v2_2/src"
+make -C psu_cortexa53_0/libsrc/avbuf_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling avbuf"
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in psu_cortexa53_0/libsrc/axipmon_v6_6/src"
+make -C psu_cortexa53_0/libsrc/axipmon_v6_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling axipmon"
+"Running Make libs in psu_cortexa53_0/libsrc/coresightps_dcc_v1_4/src"
+make -C psu_cortexa53_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling coresightps_dcc"
+"Running Make libs in psu_cortexa53_0/libsrc/cpu_cortexa53_v1_5/src"
+make -C psu_cortexa53_0/libsrc/cpu_cortexa53_v1_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling cpu_cortexa53"
+"Running Make libs in psu_cortexa53_0/libsrc/csudma_v1_2/src"
+make -C psu_cortexa53_0/libsrc/csudma_v1_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling csudma"
+"Running Make libs in psu_cortexa53_0/libsrc/ddrcpsu_v1_1/src"
+make -C psu_cortexa53_0/libsrc/ddrcpsu_v1_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling ddrcpsu"
+"Running Make libs in psu_cortexa53_0/libsrc/dpdma_v1_1/src"
+make -C psu_cortexa53_0/libsrc/dpdma_v1_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling dpdma"
+"Running Make libs in psu_cortexa53_0/libsrc/gpiops_v3_3/src"
+make -C psu_cortexa53_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling gpiops"
+"Running Make libs in psu_cortexa53_0/libsrc/iicps_v3_7/src"
+make -C psu_cortexa53_0/libsrc/iicps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling iicps"
+"Running Make libs in psu_cortexa53_0/libsrc/ipipsu_v2_3/src"
+make -C psu_cortexa53_0/libsrc/ipipsu_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling ipipsu"
+"Running Make libs in psu_cortexa53_0/libsrc/resetps_v1_1/src"
+make -C psu_cortexa53_0/libsrc/resetps_v1_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling resetps"
+xresetps.c: In function 'XResetPs_ResetAssert':
+xresetps.c:762:12: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+   (ResetID < XRESETPS_RSTID_START)) {
+            ^
+xresetps.c: In function 'XResetPs_ResetDeassert':
+xresetps.c:820:12: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+   (ResetID < XRESETPS_RSTID_START)) {
+            ^
+xresetps.c: In function 'XResetPs_ResetPulse':
+xresetps.c:877:12: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+   (ResetID < XRESETPS_RSTID_START)) {
+            ^
+xresetps.c: In function 'XResetPs_ResetStatus':
+xresetps.c:982:12: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+   (ResetID < XRESETPS_RSTID_START)) {
+            ^
+"Running Make libs in psu_cortexa53_0/libsrc/rtcpsu_v1_5/src"
+make -C psu_cortexa53_0/libsrc/rtcpsu_v1_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling rtcpsu"
+"Running Make libs in psu_cortexa53_0/libsrc/scugic_v3_9/src"
+make -C psu_cortexa53_0/libsrc/scugic_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling scugic"
+"Running Make libs in psu_cortexa53_0/libsrc/sdps_v3_5/src"
+make -C psu_cortexa53_0/libsrc/sdps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling sdps"
+"Running Make libs in psu_cortexa53_0/libsrc/spips_v3_1/src"
+make -C psu_cortexa53_0/libsrc/spips_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling spips"
+"Running Make libs in psu_cortexa53_0/libsrc/standalone_v6_7/src"
+make -C psu_cortexa53_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling standalone"
+xil_cache.c: In function 'Xil_DCacheInvalidate':
+xil_cache.c:143:80: warning: unused variable 'CacheLevelIndex' [-Wunused-variable]
+  u32 Way, WayIndex,WayAdjust, Set, SetIndex, NumSet, NumCacheLevel, CacheLevel,CacheLevelIndex;
+                                                                                ^~~~~~~~~~~~~~~
+xil_cache.c:143:54: warning: variable 'NumCacheLevel' set but not used [-Wunused-but-set-variable]
+  u32 Way, WayIndex,WayAdjust, Set, SetIndex, NumSet, NumCacheLevel, CacheLevel,CacheLevelIndex;
+                                                      ^~~~~~~~~~~~~
+xil_cache.c: In function 'Xil_DCacheFlush':
+xil_cache.c:356:80: warning: unused variable 'CacheLevelIndex' [-Wunused-variable]
+  u32 Way, WayIndex,WayAdjust, Set, SetIndex, NumSet, NumCacheLevel, CacheLevel,CacheLevelIndex;
+                                                                                ^~~~~~~~~~~~~~~
+xil_cache.c:356:54: warning: variable 'NumCacheLevel' set but not used [-Wunused-but-set-variable]
+  u32 Way, WayIndex,WayAdjust, Set, SetIndex, NumSet, NumCacheLevel, CacheLevel,CacheLevelIndex;
+                                                      ^~~~~~~~~~~~~
+"Running Make libs in psu_cortexa53_0/libsrc/sysmonpsu_v2_4/src"
+make -C psu_cortexa53_0/libsrc/sysmonpsu_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling sysmonpsu"
+"Running Make libs in psu_cortexa53_0/libsrc/ttcps_v3_6/src"
+make -C psu_cortexa53_0/libsrc/ttcps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling ttcps"
+"Running Make libs in psu_cortexa53_0/libsrc/uartps_v3_6/src"
+make -C psu_cortexa53_0/libsrc/uartps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling uartps"
+"Running Make libs in psu_cortexa53_0/libsrc/usbpsu_v1_4/src"
+make -C psu_cortexa53_0/libsrc/usbpsu_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling usbpsu"
+"Running Make libs in psu_cortexa53_0/libsrc/video_common_v4_4/src"
+make -C psu_cortexa53_0/libsrc/video_common_v4_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling video_common"
+"Running Make libs in psu_cortexa53_0/libsrc/wdtps_v3_0/src"
+make -C psu_cortexa53_0/libsrc/wdtps_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling wdtps"
+"Running Make libs in psu_cortexa53_0/libsrc/zdma_v1_5/src"
+make -C psu_cortexa53_0/libsrc/zdma_v1_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -march=armv7-a -DARMA53_32 -mfpu=vfpv3 -mfloat-abi=hard"
+"Compiling zdma"
+'Finished building libraries'
+09:46:59 **** Build of configuration Debug for project DPUTest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 32 Bit gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard -I../../DPU32_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v8 32 Bit gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard -I../../DPU32_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: DPUTest.elf'
+'Invoking: ARM v8 32 Bit gcc linker'
+arm-none-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DPU32_bsp/psu_cortexa53_0/lib -o "DPUTest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard
+'Finished building target: DPUTest.elf'
+' '
+'Invoking: ARM v8 32 Bit Print Size'
+arm-none-eabi-size DPUTest.elf  |tee "DPUTest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72416	   2580	  23328	  98324	  18014	DPUTest.elf
+'Finished building: DPUTest.elf.size'
+' '
+09:47:01 **** Build of project DPU_bsp ****
+make -k all 
+"Running Make include in psu_cortexa53_0/libsrc/avbuf_v2_2/src"
+make -C psu_cortexa53_0/libsrc/avbuf_v2_2/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Running Make include in psu_cortexa53_0/libsrc/axipmon_v6_6/src"
+make -C psu_cortexa53_0/libsrc/axipmon_v6_6/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Running Make include in psu_cortexa53_0/libsrc/coresightps_dcc_v1_4/src"
+make -C psu_cortexa53_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Running Make include in psu_cortexa53_0/libsrc/cpu_cortexa53_v1_5/src"
+make -C psu_cortexa53_0/libsrc/cpu_cortexa53_v1_5/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Running Make include in psu_cortexa53_0/libsrc/csudma_v1_2/src"
+make -C psu_cortexa53_0/libsrc/csudma_v1_2/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Running Make include in psu_cortexa53_0/libsrc/ddrcpsu_v1_1/src"
+make -C psu_cortexa53_0/libsrc/ddrcpsu_v1_1/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Running Make include in psu_cortexa53_0/libsrc/dpdma_v1_1/src"
+make -C psu_cortexa53_0/libsrc/dpdma_v1_1/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Running Make include in psu_cortexa53_0/libsrc/gpiops_v3_3/src"
+make -C psu_cortexa53_0/libsrc/gpiops_v3_3/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Running Make include in psu_cortexa53_0/libsrc/iicps_v3_7/src"
+make -C psu_cortexa53_0/libsrc/iicps_v3_7/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Running Make include in psu_cortexa53_0/libsrc/ipipsu_v2_3/src"
+make -C psu_cortexa53_0/libsrc/ipipsu_v2_3/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Running Make include in psu_cortexa53_0/libsrc/resetps_v1_1/src"
+make -C psu_cortexa53_0/libsrc/resetps_v1_1/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Running Make include in psu_cortexa53_0/libsrc/rtcpsu_v1_5/src"
+make -C psu_cortexa53_0/libsrc/rtcpsu_v1_5/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Running Make include in psu_cortexa53_0/libsrc/scugic_v3_9/src"
+make -C psu_cortexa53_0/libsrc/scugic_v3_9/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Running Make include in psu_cortexa53_0/libsrc/sdps_v3_5/src"
+make -C psu_cortexa53_0/libsrc/sdps_v3_5/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Running Make include in psu_cortexa53_0/libsrc/spips_v3_1/src"
+make -C psu_cortexa53_0/libsrc/spips_v3_1/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Running Make include in psu_cortexa53_0/libsrc/standalone_v6_7/src"
+make -C psu_cortexa53_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Running Make include in psu_cortexa53_0/libsrc/sysmonpsu_v2_4/src"
+make -C psu_cortexa53_0/libsrc/sysmonpsu_v2_4/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Running Make include in psu_cortexa53_0/libsrc/ttcps_v3_6/src"
+make -C psu_cortexa53_0/libsrc/ttcps_v3_6/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Running Make include in psu_cortexa53_0/libsrc/uartps_v3_6/src"
+make -C psu_cortexa53_0/libsrc/uartps_v3_6/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Running Make include in psu_cortexa53_0/libsrc/usbpsu_v1_4/src"
+make -C psu_cortexa53_0/libsrc/usbpsu_v1_4/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Running Make include in psu_cortexa53_0/libsrc/video_common_v4_4/src"
+make -C psu_cortexa53_0/libsrc/video_common_v4_4/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Running Make include in psu_cortexa53_0/libsrc/wdtps_v3_0/src"
+make -C psu_cortexa53_0/libsrc/wdtps_v3_0/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Running Make include in psu_cortexa53_0/libsrc/zdma_v1_5/src"
+make -C psu_cortexa53_0/libsrc/zdma_v1_5/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Running Make libs in psu_cortexa53_0/libsrc/avbuf_v2_2/src"
+make -C psu_cortexa53_0/libsrc/avbuf_v2_2/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Compiling avbuf"
+aarch64-none-elf-ar: creating ../../../lib/libxil.a
+"Running Make libs in psu_cortexa53_0/libsrc/axipmon_v6_6/src"
+make -C psu_cortexa53_0/libsrc/axipmon_v6_6/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Compiling axipmon"
+"Running Make libs in psu_cortexa53_0/libsrc/coresightps_dcc_v1_4/src"
+make -C psu_cortexa53_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Compiling coresightps_dcc"
+"Running Make libs in psu_cortexa53_0/libsrc/cpu_cortexa53_v1_5/src"
+make -C psu_cortexa53_0/libsrc/cpu_cortexa53_v1_5/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Compiling cpu_cortexa53"
+"Running Make libs in psu_cortexa53_0/libsrc/csudma_v1_2/src"
+make -C psu_cortexa53_0/libsrc/csudma_v1_2/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Compiling csudma"
+"Running Make libs in psu_cortexa53_0/libsrc/ddrcpsu_v1_1/src"
+make -C psu_cortexa53_0/libsrc/ddrcpsu_v1_1/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Compiling ddrcpsu"
+"Running Make libs in psu_cortexa53_0/libsrc/dpdma_v1_1/src"
+make -C psu_cortexa53_0/libsrc/dpdma_v1_1/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Compiling dpdma"
+"Running Make libs in psu_cortexa53_0/libsrc/gpiops_v3_3/src"
+make -C psu_cortexa53_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in psu_cortexa53_0/libsrc/iicps_v3_7/src"
+make -C psu_cortexa53_0/libsrc/iicps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Compiling iicps"
+"Running Make libs in psu_cortexa53_0/libsrc/ipipsu_v2_3/src"
+make -C psu_cortexa53_0/libsrc/ipipsu_v2_3/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Compiling ipipsu"
+"Running Make libs in psu_cortexa53_0/libsrc/resetps_v1_1/src"
+make -C psu_cortexa53_0/libsrc/resetps_v1_1/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Compiling resetps"
+"Running Make libs in psu_cortexa53_0/libsrc/rtcpsu_v1_5/src"
+make -C psu_cortexa53_0/libsrc/rtcpsu_v1_5/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Compiling rtcpsu"
+"Running Make libs in psu_cortexa53_0/libsrc/scugic_v3_9/src"
+make -C psu_cortexa53_0/libsrc/scugic_v3_9/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in psu_cortexa53_0/libsrc/sdps_v3_5/src"
+make -C psu_cortexa53_0/libsrc/sdps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Compiling sdps"
+"Running Make libs in psu_cortexa53_0/libsrc/spips_v3_1/src"
+make -C psu_cortexa53_0/libsrc/spips_v3_1/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Compiling spips"
+"Running Make libs in psu_cortexa53_0/libsrc/standalone_v6_7/src"
+make -C psu_cortexa53_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Compiling standalone A53"
+translation_table.S:149:2: warning: #warning "There's no DDR_1 in the HW design. MMU translation table marks 32 GB DDR address space as undefined" [-Wcpp]
+ #warning "There's no DDR_1 in the HW design. MMU translation table marks 32 GB DDR address space as undefined"
+  ^~~~~~~
+"Running Make libs in psu_cortexa53_0/libsrc/sysmonpsu_v2_4/src"
+make -C psu_cortexa53_0/libsrc/sysmonpsu_v2_4/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Compiling sysmonpsu"
+"Running Make libs in psu_cortexa53_0/libsrc/ttcps_v3_6/src"
+make -C psu_cortexa53_0/libsrc/ttcps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Compiling ttcps"
+"Running Make libs in psu_cortexa53_0/libsrc/uartps_v3_6/src"
+make -C psu_cortexa53_0/libsrc/uartps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in psu_cortexa53_0/libsrc/usbpsu_v1_4/src"
+make -C psu_cortexa53_0/libsrc/usbpsu_v1_4/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Compiling usbpsu"
+"Running Make libs in psu_cortexa53_0/libsrc/video_common_v4_4/src"
+make -C psu_cortexa53_0/libsrc/video_common_v4_4/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Compiling video_common"
+"Running Make libs in psu_cortexa53_0/libsrc/wdtps_v3_0/src"
+make -C psu_cortexa53_0/libsrc/wdtps_v3_0/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Compiling wdtps"
+"Running Make libs in psu_cortexa53_0/libsrc/zdma_v1_5/src"
+make -C psu_cortexa53_0/libsrc/zdma_v1_5/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+"Compiling zdma"
+'Finished building libraries'
+09:47:40 **** Build of configuration Debug for project DPU ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../DPU_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:70:6: warning: unused variable 'j' [-Wunused-variable]
+  int j,u;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../DPU_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: DPU.elf'
+'Invoking: ARM v8 gcc linker'
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DPU_bsp/psu_cortexa53_0/lib -o "DPU.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: DPU.elf'
+' '
+'Invoking: ARM v8 Print Size'
+aarch64-none-elf-size DPU.elf  |tee "DPU.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  74992	   4600	  20776	 100368	  18810	DPU.elf
+'Finished building: DPU.elf.size'
+' '
+09:49:49 **** Auto Build of configuration Debug for project DPUTest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 32 Bit gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard -I../../DPU32_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:18: warning: unused variable 'u' [-Wunused-variable]
+     unsigned int u;
+                  ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: DPUTest.elf'
+'Invoking: ARM v8 32 Bit gcc linker'
+arm-none-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DPU32_bsp/psu_cortexa53_0/lib -o "DPUTest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard
+'Finished building target: DPUTest.elf'
+' '
+'Invoking: ARM v8 32 Bit Print Size'
+arm-none-eabi-size DPUTest.elf  |tee "DPUTest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19644	   1144	  22576	  43364	   a964	DPUTest.elf
+'Finished building: DPUTest.elf.size'
+' '
+09:50:28 **** Incremental Build of configuration Debug for project DPUTest ****
+make all 
+make: Nothing to be done for `all'.
+10:00:22 **** Auto Build of configuration Debug for project DPUTest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 32 Bit gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard -I../../DPU32_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: DPUTest.elf'
+'Invoking: ARM v8 32 Bit gcc linker'
+arm-none-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DPU32_bsp/psu_cortexa53_0/lib -o "DPUTest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard
+'Finished building target: DPUTest.elf'
+' '
+'Invoking: ARM v8 32 Bit Print Size'
+arm-none-eabi-size DPUTest.elf  |tee "DPUTest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72672	   2580	  23328	  98580	  18114	DPUTest.elf
+'Finished building: DPUTest.elf.size'
+' '
+10:00:30 **** Incremental Build of configuration Debug for project DPUTest ****
+make all 
+make: Nothing to be done for `all'.
+10:01:03 **** Incremental Build of configuration Debug for project DPUTest ****
+make all 
+make: Nothing to be done for `all'.
+10:02:12 **** Auto Build of configuration Debug for project DPUTest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 32 Bit gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard -I../../DPU32_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: DPUTest.elf'
+'Invoking: ARM v8 32 Bit gcc linker'
+arm-none-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DPU32_bsp/psu_cortexa53_0/lib -o "DPUTest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard
+'Finished building target: DPUTest.elf'
+' '
+'Invoking: ARM v8 32 Bit Print Size'
+arm-none-eabi-size DPUTest.elf  |tee "DPUTest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21196	   1144	  22576	  44916	   af74	DPUTest.elf
+'Finished building: DPUTest.elf.size'
+' '
+10:02:28 **** Incremental Build of configuration Debug for project DPUTest ****
+make all 
+make: Nothing to be done for `all'.
+10:08:01 **** Auto Build of configuration Debug for project DPUTest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 32 Bit gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard -I../../DPU32_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:118:7: error: expected expression before '/' token
+     }*/
+       ^
+make: *** [src/helloworld.o] ´íÎó 1
+10:08:06 **** Auto Build of configuration Debug for project DPUTest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 32 Bit gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard -I../../DPU32_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: DPUTest.elf'
+'Invoking: ARM v8 32 Bit gcc linker'
+arm-none-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DPU32_bsp/psu_cortexa53_0/lib -o "DPUTest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard
+'Finished building target: DPUTest.elf'
+' '
+'Invoking: ARM v8 32 Bit Print Size'
+arm-none-eabi-size DPUTest.elf  |tee "DPUTest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72672	   2580	  23328	  98580	  18114	DPUTest.elf
+'Finished building: DPUTest.elf.size'
+' '
+10:08:12 **** Auto Build of configuration Debug for project DPUTest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 32 Bit gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard -I../../DPU32_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: DPUTest.elf'
+'Invoking: ARM v8 32 Bit gcc linker'
+arm-none-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DPU32_bsp/psu_cortexa53_0/lib -o "DPUTest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard
+'Finished building target: DPUTest.elf'
+' '
+'Invoking: ARM v8 32 Bit Print Size'
+arm-none-eabi-size DPUTest.elf  |tee "DPUTest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72416	   2580	  23328	  98324	  18014	DPUTest.elf
+'Finished building: DPUTest.elf.size'
+' '
+10:08:22 **** Auto Build of configuration Debug for project DPUTest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 32 Bit gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard -I../../DPU32_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: DPUTest.elf'
+'Invoking: ARM v8 32 Bit gcc linker'
+arm-none-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DPU32_bsp/psu_cortexa53_0/lib -o "DPUTest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard
+'Finished building target: DPUTest.elf'
+' '
+'Invoking: ARM v8 32 Bit Print Size'
+arm-none-eabi-size DPUTest.elf  |tee "DPUTest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72416	   2580	  23328	  98324	  18014	DPUTest.elf
+'Finished building: DPUTest.elf.size'
+' '
+10:08:28 **** Incremental Build of configuration Debug for project DPUTest ****
+make all 
+make: Nothing to be done for `all'.
+10:08:59 **** Incremental Build of configuration Debug for project DPUTest ****
+make all 
+make: Nothing to be done for `all'.
+10:30:20 **** Auto Build of configuration Debug for project DPUTest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 32 Bit gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard -I../../DPU32_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: DPUTest.elf'
+'Invoking: ARM v8 32 Bit gcc linker'
+arm-none-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DPU32_bsp/psu_cortexa53_0/lib -o "DPUTest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard
+'Finished building target: DPUTest.elf'
+' '
+'Invoking: ARM v8 32 Bit Print Size'
+arm-none-eabi-size DPUTest.elf  |tee "DPUTest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72416	   2580	  23328	  98324	  18014	DPUTest.elf
+'Finished building: DPUTest.elf.size'
+' '
+10:38:44 **** Auto Build of configuration Debug for project DPUTest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 32 Bit gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard -I../../DPU32_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:18: warning: unused variable 'u' [-Wunused-variable]
+     unsigned int u;
+                  ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: DPUTest.elf'
+'Invoking: ARM v8 32 Bit gcc linker'
+arm-none-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DPU32_bsp/psu_cortexa53_0/lib -o "DPUTest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard
+'Finished building target: DPUTest.elf'
+' '
+'Invoking: ARM v8 32 Bit Print Size'
+arm-none-eabi-size DPUTest.elf  |tee "DPUTest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19644	   1144	  22576	  43364	   a964	DPUTest.elf
+'Finished building: DPUTest.elf.size'
+' '
+10:38:51 **** Incremental Build of configuration Debug for project DPUTest ****
+make all 
+make: Nothing to be done for `all'.
+10:46:16 **** Auto Build of configuration Debug for project DPUTest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 32 Bit gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard -I../../DPU32_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: DPUTest.elf'
+'Invoking: ARM v8 32 Bit gcc linker'
+arm-none-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DPU32_bsp/psu_cortexa53_0/lib -o "DPUTest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard
+'Finished building target: DPUTest.elf'
+' '
+'Invoking: ARM v8 32 Bit Print Size'
+arm-none-eabi-size DPUTest.elf  |tee "DPUTest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72416	   2580	  23328	  98324	  18014	DPUTest.elf
+'Finished building: DPUTest.elf.size'
+' '
+10:46:22 **** Incremental Build of configuration Debug for project DPUTest ****
+make all 
+make: Nothing to be done for `all'.
+10:46:46 **** Incremental Build of configuration Debug for project DPUTest ****
+make all 
+make: Nothing to be done for `all'.
+10:47:45 **** Incremental Build of configuration Debug for project DPUTest ****
+make all 
+make: Nothing to be done for `all'.
+10:48:02 **** Incremental Build of configuration Debug for project DPUTest ****
+make all 
+make: Nothing to be done for `all'.
+21:50:29 **** Auto Build of configuration Debug for project DPUTest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 32 Bit gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard -I../../DPU32_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: DPUTest.elf'
+'Invoking: ARM v8 32 Bit gcc linker'
+arm-none-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DPU32_bsp/psu_cortexa53_0/lib -o "DPUTest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard
+'Finished building target: DPUTest.elf'
+' '
+'Invoking: ARM v8 32 Bit Print Size'
+arm-none-eabi-size DPUTest.elf  |tee "DPUTest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72416	   2580	  23328	  98324	  18014	DPUTest.elf
+'Finished building: DPUTest.elf.size'
+' '
+21:51:20 **** Incremental Build of configuration Debug for project DPUTest ****
+make all 
+make: Nothing to be done for `all'.
+19:59:19 **** Auto Build of configuration Debug for project DPUTest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 32 Bit gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard -I../../DPU32_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:95:10: error: 'u' undeclared (first use in this function); did you mean 'u8'?
+     for (u=0; u < 1000; u++) {
+          ^
+          u8
+../src/helloworld.c:95:10: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/helloworld.o] ´íÎó 1
+19:59:40 **** Auto Build of configuration Debug for project DPUTest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 32 Bit gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard -I../../DPU32_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: DPUTest.elf'
+'Invoking: ARM v8 32 Bit gcc linker'
+arm-none-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DPU32_bsp/psu_cortexa53_0/lib -o "DPUTest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard
+'Finished building target: DPUTest.elf'
+' '
+'Invoking: ARM v8 32 Bit Print Size'
+arm-none-eabi-size DPUTest.elf  |tee "DPUTest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72384	   2580	  23328	  98292	  17ff4	DPUTest.elf
+'Finished building: DPUTest.elf.size'
+' '
+20:05:02 **** Auto Build of configuration Debug for project DPUTest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 32 Bit gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard -I../../DPU32_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: DPUTest.elf'
+'Invoking: ARM v8 32 Bit gcc linker'
+arm-none-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DPU32_bsp/psu_cortexa53_0/lib -o "DPUTest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard
+'Finished building target: DPUTest.elf'
+' '
+'Invoking: ARM v8 32 Bit Print Size'
+arm-none-eabi-size DPUTest.elf  |tee "DPUTest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19644	   1144	  22576	  43364	   a964	DPUTest.elf
+'Finished building: DPUTest.elf.size'
+' '
+20:05:28 **** Incremental Build of configuration Debug for project DPUTest ****
+make all 
+make: Nothing to be done for `all'.
+20:14:46 **** Auto Build of configuration Debug for project DPUTest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 32 Bit gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard -I../../DPU32_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: DPUTest.elf'
+'Invoking: ARM v8 32 Bit gcc linker'
+arm-none-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DPU32_bsp/psu_cortexa53_0/lib -o "DPUTest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard
+'Finished building target: DPUTest.elf'
+' '
+'Invoking: ARM v8 32 Bit Print Size'
+arm-none-eabi-size DPUTest.elf  |tee "DPUTest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72384	   2580	  23328	  98292	  17ff4	DPUTest.elf
+'Finished building: DPUTest.elf.size'
+' '
+20:14:58 **** Incremental Build of configuration Debug for project DPUTest ****
+make all 
+make: Nothing to be done for `all'.
+20:15:24 **** Incremental Build of configuration Debug for project DPUTest ****
+make all 
+make: Nothing to be done for `all'.
+20:17:13 **** Auto Build of configuration Debug for project DPUTest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 32 Bit gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard -I../../DPU32_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: DPUTest.elf'
+'Invoking: ARM v8 32 Bit gcc linker'
+arm-none-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DPU32_bsp/psu_cortexa53_0/lib -o "DPUTest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard
+'Finished building target: DPUTest.elf'
+' '
+'Invoking: ARM v8 32 Bit Print Size'
+arm-none-eabi-size DPUTest.elf  |tee "DPUTest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72384	   2580	  23328	  98292	  17ff4	DPUTest.elf
+'Finished building: DPUTest.elf.size'
+' '

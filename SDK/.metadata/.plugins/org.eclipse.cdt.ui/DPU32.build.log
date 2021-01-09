@@ -1,0 +1,44 @@
+21:44:34 **** Build of configuration Debug for project DPU32 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 32 Bit gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard -I../../DPU32_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:63:7: warning: implicit declaration of function 'Xil_SetTlbAttributes' [-Wimplicit-function-declaration]
+       Xil_SetTlbAttributes(u * MB, 0xC1E); // cached & buffered
+       ^~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v8 32 Bit gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard -I../../DPU32_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: DPU32.elf'
+'Invoking: ARM v8 32 Bit gcc linker'
+arm-none-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DPU32_bsp/psu_cortexa53_0/lib -o "DPU32.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+e:/xilinx2018/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ./src/helloworld.o uses VFP register arguments, DPU32.elf does not
+e:/xilinx2018/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ./src/helloworld.o
+e:/xilinx2018/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ./src/platform.o uses VFP register arguments, DPU32.elf does not
+e:/xilinx2018/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ./src/platform.o
+e:/xilinx2018/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../../DPU32_bsp/psu_cortexa53_0/lib\libxil.a(print.o) uses VFP register arguments, DPU32.elf does not
+e:/xilinx2018/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../DPU32_bsp/psu_cortexa53_0/lib\libxil.a(print.o)
+e:/xilinx2018/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../../DPU32_bsp/psu_cortexa53_0/lib\libxil.a(xil_mmu.o) uses VFP register arguments, DPU32.elf does not
+e:/xilinx2018/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../DPU32_bsp/psu_cortexa53_0/lib\libxil.a(xil_mmu.o)
+e:/xilinx2018/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../../DPU32_bsp/psu_cortexa53_0/lib\libxil.a(outbyte.o) uses VFP register arguments, DPU32.elf does not
+e:/xilinx2018/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../DPU32_bsp/psu_cortexa53_0/lib\libxil.a(outbyte.o)
+e:/xilinx2018/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../../DPU32_bsp/psu_cortexa53_0/lib\libxil.a(vectors.o) uses VFP register arguments, DPU32.elf does not
+e:/xilinx2018/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../DPU32_bsp/psu_cortexa53_0/lib\libxil.a(vectors.o)
+e:/xilinx2018/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../../DPU32_bsp/psu_cortexa53_0/lib\libxil.a(xil_cache.o) uses VFP register arguments, DPU32.elf does not
+e:/xilinx2018/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../DPU32_bsp/psu_cortexa53_0/lib\libxil.a(xil_cache.o)
+e:/xilinx2018/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../../DPU32_bsp/psu_cortexa53_0/lib\libxil.a(xil_exception.o) uses VFP register arguments, DPU32.elf does not
+e:/xilinx2018/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../DPU32_bsp/psu_cortexa53_0/lib\libxil.a(xil_exception.o)
+e:/xilinx2018/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../../DPU32_bsp/psu_cortexa53_0/lib\libxil.a(xuartps_hw.o) uses VFP register arguments, DPU32.elf does not
+e:/xilinx2018/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../DPU32_bsp/psu_cortexa53_0/lib\libxil.a(xuartps_hw.o)
+e:/xilinx2018/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: error: ../../DPU32_bsp/psu_cortexa53_0/lib\libxil.a(_exit.o) uses VFP register arguments, DPU32.elf does not
+e:/xilinx2018/sdk/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld.exe: failed to merge target specific data of file ../../DPU32_bsp/psu_cortexa53_0/lib\libxil.a(_exit.o)
+collect2.exe: error: ld returned 1 exit status
+make: *** [DPU32.elf] ´íÎó 1
+
+21:44:35 Build Finished (took 969ms)
+

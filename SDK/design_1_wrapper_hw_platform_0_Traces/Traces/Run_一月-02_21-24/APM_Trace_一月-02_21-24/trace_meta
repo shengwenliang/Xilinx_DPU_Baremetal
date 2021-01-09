@@ -1,0 +1,9 @@
+#
+#Sat Jan 02 21:24:18 CST 2021
+apms=psu_apm_0,psu_apm_1,psu_apm_2,psu_apm_5
+nodes=psu_apm_0_SLOT_0,psu_apm_1_SLOT_0,psu_apm_2_SLOT_0,psu_apm_5_SLOT_0
+counters=psu_apm_0-SAMPLE_REGISTER\:4,psu_apm_1-SAMPLE_REGISTER\:4,psu_apm_2-SAMPLE_REGISTER\:4,psu_apm_5-SAMPLE_REGISTER\:4,psu_apm_0_SLOT_0-WRITE_BYTE\:4,psu_apm_0_SLOT_0-WRITE_TRANS\:4,psu_apm_0_SLOT_0-WRITE_LATENCY\:4,psu_apm_0_SLOT_0-READ_BYTE\:4,psu_apm_0_SLOT_0-READ_TRANS\:4,psu_apm_0_SLOT_0-READ_LATENCY\:4,psu_apm_0_SLOT_0-WRITE_LATENCY_MIN\:4,psu_apm_0_SLOT_0-WRITE_LATENCY_MAX\:4,psu_apm_0_SLOT_0-READ_LATENCY_MIN\:4,psu_apm_0_SLOT_0-READ_LATENCY_MAX\:4,psu_apm_1_SLOT_0-WRITE_BYTE\:4,psu_apm_1_SLOT_0-WRITE_TRANS\:4,psu_apm_1_SLOT_0-WRITE_LATENCY\:4,psu_apm_1_SLOT_0-READ_BYTE\:4,psu_apm_1_SLOT_0-READ_TRANS\:4,psu_apm_1_SLOT_0-READ_LATENCY\:4,psu_apm_1_SLOT_0-WRITE_LATENCY_MAX\:4,psu_apm_1_SLOT_0-READ_LATENCY_MAX\:4,psu_apm_2_SLOT_0-WRITE_BYTE\:4,psu_apm_2_SLOT_0-WRITE_TRANS\:4,psu_apm_2_SLOT_0-WRITE_LATENCY\:4,psu_apm_2_SLOT_0-READ_BYTE\:4,psu_apm_2_SLOT_0-READ_TRANS\:4,psu_apm_2_SLOT_0-READ_LATENCY\:4,psu_apm_2_SLOT_0-WRITE_LATENCY_MAX\:4,psu_apm_2_SLOT_0-READ_LATENCY_MAX\:4,psu_apm_5_SLOT_0-WRITE_BYTE\:4,psu_apm_5_SLOT_0-WRITE_TRANS\:4,psu_apm_5_SLOT_0-WRITE_LATENCY\:4,psu_apm_5_SLOT_0-READ_BYTE\:4,psu_apm_5_SLOT_0-READ_TRANS\:4,psu_apm_5_SLOT_0-READ_LATENCY\:4,psu_apm_5_SLOT_0-WRITE_LATENCY_MAX\:4,psu_apm_5_SLOT_0-READ_LATENCY_MAX\:4
+type=APM
+timestamp=1609593858174
+apm_counters_sizes=44,36,36,36
+node_frequencies=1.0E8,1.0E8,1.0E8,1.0E8

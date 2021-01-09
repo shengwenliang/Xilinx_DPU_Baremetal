@@ -1,0 +1,2558 @@
+20:51:21 INFO  : Registering command handlers for SDK TCF services
+20:51:23 INFO  : Launching XSCT server: xsct.bat -interactive E:\DPU_OpenSSD\Baremetal\SDK\temp_xsdb_launch_script.tcl
+20:51:32 INFO  : XSCT server has started successfully.
+20:51:38 INFO  : Successfully done setting XSCT server connection channel  
+20:51:38 INFO  : Successfully done setting SDK workspace  
+20:52:30 INFO  : Project 'design_1_wrapper_hw_platform_0' created. You can now create BSPs and application projects targeting this hardware platform.
+20:55:10 INFO  : Refreshed build settings on project DPU
+20:56:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:56:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0} -index 0' command is executed.
+20:56:24 INFO  : FPGA configured successfully with bitstream "E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+20:56:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:56:57 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+20:56:57 INFO  : 'jtag frequency' command is executed.
+20:56:57 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+20:56:57 INFO  : Context for 'APU' is selected.
+20:56:57 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+20:56:57 INFO  : 'configparams force-mem-access 1' command is executed.
+20:56:57 INFO  : Context for 'APU' is selected.
+20:56:57 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+20:56:59 INFO  : 'psu_init' command is executed.
+20:57:00 INFO  : 'after 1000' command is executed.
+20:57:00 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+20:57:01 INFO  : 'after 1000' command is executed.
+20:57:01 INFO  : 'psu_ps_pl_reset_config' command is executed.
+20:57:01 INFO  : 'catch {psu_protection}' command is executed.
+20:57:01 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+20:57:01 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+20:57:01 INFO  : The application 'E:/DPU_OpenSSD/Baremetal/SDK/DPU/Debug/DPU.elf' is downloaded to processor 'psu_cortexa53_0'.
+20:57:01 INFO  : 'configparams force-mem-access 0' command is executed.
+20:57:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -processor
+dow E:/DPU_OpenSSD/Baremetal/SDK/DPU/Debug/DPU.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:57:01 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+20:57:01 INFO  : 'con' command is executed.
+20:57:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+con
+----------------End of Script----------------
+
+20:57:01 INFO  : Launch script is exported to file 'E:\DPU_OpenSSD\Baremetal\SDK\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_dpu.elf_on_local.tcl'
+20:59:02 INFO  : Restoring File Contents to Memory...
+20:59:09 INFO  : Restored Contents to Memory Successfully from File E:\DPU_OpenSSD\Baremetal\Xilinx_DPU_Baremetal\mobilenetv2\binary\input.bin
+20:59:37 INFO  : Restoring File Contents to Memory...
+21:00:00 INFO  : Restored Contents to Memory Successfully from File E:\DPU_OpenSSD\Baremetal\Xilinx_DPU_Baremetal\mobilenetv2\binary\instruction.bin
+21:00:13 INFO  : Restoring File Contents to Memory...
+21:03:13 INFO  : Restored Contents to Memory Successfully from File E:\DPU_OpenSSD\Baremetal\Xilinx_DPU_Baremetal\mobilenetv2\binary\weight.bin
+21:04:35 INFO  : Disconnected from the channel tcfchan#1.
+21:04:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:04:36 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+21:04:37 INFO  : 'jtag frequency' command is executed.
+21:04:37 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+21:04:37 INFO  : Context for 'APU' is selected.
+21:04:37 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+21:04:37 INFO  : 'configparams force-mem-access 1' command is executed.
+21:04:37 INFO  : Context for 'APU' is selected.
+21:04:37 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+21:04:53 ERROR : 'psu_init' is cancelled.
+21:04:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+----------------End of Script----------------
+
+21:04:53 INFO  : Issued abort command to xsdb.
+21:04:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:04:59 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+21:04:59 INFO  : 'jtag frequency' command is executed.
+21:04:59 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+21:04:59 INFO  : Context for 'APU' is selected.
+21:04:59 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+21:04:59 INFO  : 'configparams force-mem-access 1' command is executed.
+21:04:59 INFO  : Context for 'APU' is selected.
+21:04:59 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+21:05:00 INFO  : 'psu_init' command is executed.
+21:05:01 INFO  : 'after 1000' command is executed.
+21:05:02 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+21:05:03 INFO  : 'after 1000' command is executed.
+21:05:03 INFO  : 'psu_ps_pl_reset_config' command is executed.
+21:05:03 INFO  : 'catch {psu_protection}' command is executed.
+21:05:03 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:05:03 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+21:05:03 INFO  : The application 'E:/DPU_OpenSSD/Baremetal/SDK/DPU/Debug/DPU.elf' is downloaded to processor 'psu_cortexa53_0'.
+21:05:03 INFO  : 'configparams force-mem-access 0' command is executed.
+21:05:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -processor
+dow E:/DPU_OpenSSD/Baremetal/SDK/DPU/Debug/DPU.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:05:03 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:05:03 INFO  : 'con' command is executed.
+21:05:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+con
+----------------End of Script----------------
+
+21:05:03 INFO  : Launch script is exported to file 'E:\DPU_OpenSSD\Baremetal\SDK\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_dpu.elf_on_local.tcl'
+21:05:30 INFO  : Disconnected from the channel tcfchan#3.
+21:05:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:05:31 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+21:05:31 INFO  : 'jtag frequency' command is executed.
+21:05:31 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+21:05:31 INFO  : Context for 'APU' is selected.
+21:05:31 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+21:05:31 INFO  : 'configparams force-mem-access 1' command is executed.
+21:05:31 INFO  : Context for 'APU' is selected.
+21:05:31 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+21:05:32 INFO  : 'psu_init' command is executed.
+21:05:34 INFO  : 'after 1000' command is executed.
+21:05:34 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+21:05:35 INFO  : 'after 1000' command is executed.
+21:05:35 INFO  : 'psu_ps_pl_reset_config' command is executed.
+21:05:35 INFO  : 'catch {psu_protection}' command is executed.
+21:05:35 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:05:35 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+21:05:35 INFO  : The application 'E:/DPU_OpenSSD/Baremetal/SDK/DPU/Debug/DPU.elf' is downloaded to processor 'psu_cortexa53_0'.
+21:05:35 INFO  : 'configparams force-mem-access 0' command is executed.
+21:05:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -processor
+dow E:/DPU_OpenSSD/Baremetal/SDK/DPU/Debug/DPU.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:05:35 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:05:35 INFO  : 'con' command is executed.
+21:05:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+con
+----------------End of Script----------------
+
+21:05:35 INFO  : Launch script is exported to file 'E:\DPU_OpenSSD\Baremetal\SDK\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_dpu.elf_on_local.tcl'
+21:07:20 INFO  : Restoring File Contents to Memory...
+21:07:26 INFO  : Restored Contents to Memory Successfully from File E:\DPU_OpenSSD\Baremetal\Xilinx_DPU_Baremetal\mobilenetv2\binary\input.bin
+21:08:48 INFO  : Disconnected from the channel tcfchan#4.
+21:08:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:08:50 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+21:08:50 INFO  : 'jtag frequency' command is executed.
+21:08:50 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+21:08:50 INFO  : Context for 'APU' is selected.
+21:08:50 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+21:08:50 INFO  : 'configparams force-mem-access 1' command is executed.
+21:08:50 INFO  : Context for 'APU' is selected.
+21:08:50 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+21:08:51 INFO  : 'psu_init' command is executed.
+21:08:52 INFO  : 'after 1000' command is executed.
+21:08:52 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+21:08:53 INFO  : 'after 1000' command is executed.
+21:08:53 INFO  : 'psu_ps_pl_reset_config' command is executed.
+21:08:53 INFO  : 'catch {psu_protection}' command is executed.
+21:08:53 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:08:53 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+21:08:54 INFO  : The application 'E:/DPU_OpenSSD/Baremetal/SDK/DPU/Debug/DPU.elf' is downloaded to processor 'psu_cortexa53_0'.
+21:08:54 INFO  : 'configparams force-mem-access 0' command is executed.
+21:08:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -processor
+dow E:/DPU_OpenSSD/Baremetal/SDK/DPU/Debug/DPU.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:08:54 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:08:54 INFO  : 'con' command is executed.
+21:08:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+con
+----------------End of Script----------------
+
+21:08:54 INFO  : Launch script is exported to file 'E:\DPU_OpenSSD\Baremetal\SDK\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_dpu.elf_on_local.tcl'
+21:09:20 INFO  : Disconnected from the channel tcfchan#5.
+21:09:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:09:21 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+21:09:21 INFO  : 'jtag frequency' command is executed.
+21:09:21 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+21:09:21 INFO  : Context for 'APU' is selected.
+21:09:21 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+21:09:21 INFO  : 'configparams force-mem-access 1' command is executed.
+21:09:21 INFO  : Context for 'APU' is selected.
+21:09:21 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+21:09:47 ERROR : 'psu_init' is cancelled.
+21:09:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+----------------End of Script----------------
+
+21:09:47 INFO  : Issued abort command to xsdb.
+21:09:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:09:52 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+21:09:52 INFO  : 'jtag frequency' command is executed.
+21:09:52 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+21:09:53 INFO  : Context for 'APU' is selected.
+21:09:53 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+21:09:53 INFO  : 'configparams force-mem-access 1' command is executed.
+21:09:53 INFO  : Context for 'APU' is selected.
+21:09:53 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+21:09:54 INFO  : 'psu_init' command is executed.
+21:09:55 INFO  : 'after 1000' command is executed.
+21:09:55 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+21:09:56 INFO  : 'after 1000' command is executed.
+21:09:56 INFO  : 'psu_ps_pl_reset_config' command is executed.
+21:09:56 INFO  : 'catch {psu_protection}' command is executed.
+21:09:56 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:09:56 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+21:09:57 INFO  : The application 'E:/DPU_OpenSSD/Baremetal/SDK/DPU/Debug/DPU.elf' is downloaded to processor 'psu_cortexa53_0'.
+21:09:57 INFO  : 'configparams force-mem-access 0' command is executed.
+21:09:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -processor
+dow E:/DPU_OpenSSD/Baremetal/SDK/DPU/Debug/DPU.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:09:57 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:09:57 INFO  : 'con' command is executed.
+21:09:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+con
+----------------End of Script----------------
+
+21:09:57 INFO  : Launch script is exported to file 'E:\DPU_OpenSSD\Baremetal\SDK\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_dpu.elf_on_local.tcl'
+21:12:27 INFO  : Disconnected from the channel tcfchan#6.
+21:12:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:12:28 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+21:12:28 INFO  : 'jtag frequency' command is executed.
+21:12:28 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+21:12:29 INFO  : Context for 'APU' is selected.
+21:12:29 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+21:12:29 INFO  : 'configparams force-mem-access 1' command is executed.
+21:12:29 INFO  : Context for 'APU' is selected.
+21:12:29 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+21:12:30 INFO  : 'psu_init' command is executed.
+21:12:31 INFO  : 'after 1000' command is executed.
+21:12:31 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+21:12:32 INFO  : 'after 1000' command is executed.
+21:12:32 INFO  : 'psu_ps_pl_reset_config' command is executed.
+21:12:32 INFO  : 'catch {psu_protection}' command is executed.
+21:12:32 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:12:32 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+21:12:33 INFO  : The application 'E:/DPU_OpenSSD/Baremetal/SDK/DPU/Debug/DPU.elf' is downloaded to processor 'psu_cortexa53_0'.
+21:12:33 INFO  : 'configparams force-mem-access 0' command is executed.
+21:12:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -processor
+dow E:/DPU_OpenSSD/Baremetal/SDK/DPU/Debug/DPU.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:12:33 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:12:33 INFO  : 'con' command is executed.
+21:12:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+con
+----------------End of Script----------------
+
+21:12:33 INFO  : Launch script is exported to file 'E:\DPU_OpenSSD\Baremetal\SDK\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_dpu.elf_on_local.tcl'
+21:15:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:15:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0} -index 0' command is executed.
+21:15:16 INFO  : FPGA configured successfully with bitstream "E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+21:15:22 INFO  : Disconnected from the channel tcfchan#7.
+21:15:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:15:24 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+21:15:24 INFO  : 'jtag frequency' command is executed.
+21:15:24 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+21:15:24 INFO  : Context for 'APU' is selected.
+21:15:24 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+21:15:24 INFO  : 'configparams force-mem-access 1' command is executed.
+21:15:24 INFO  : Context for 'APU' is selected.
+21:15:24 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+21:15:25 INFO  : 'psu_init' command is executed.
+21:15:26 INFO  : 'after 1000' command is executed.
+21:15:26 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+21:15:27 INFO  : 'after 1000' command is executed.
+21:15:27 INFO  : 'psu_ps_pl_reset_config' command is executed.
+21:15:27 INFO  : 'catch {psu_protection}' command is executed.
+21:15:27 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:15:27 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+21:15:28 INFO  : The application 'E:/DPU_OpenSSD/Baremetal/SDK/DPU/Debug/DPU.elf' is downloaded to processor 'psu_cortexa53_0'.
+21:15:28 INFO  : 'configparams force-mem-access 0' command is executed.
+21:15:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -processor
+dow E:/DPU_OpenSSD/Baremetal/SDK/DPU/Debug/DPU.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:15:28 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:15:28 INFO  : 'con' command is executed.
+21:15:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+con
+----------------End of Script----------------
+
+21:15:28 INFO  : Launch script is exported to file 'E:\DPU_OpenSSD\Baremetal\SDK\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_dpu.elf_on_local.tcl'
+21:16:09 INFO  : Disconnected from the channel tcfchan#8.
+21:16:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:16:11 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+21:16:11 INFO  : 'jtag frequency' command is executed.
+21:16:11 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+21:16:11 INFO  : Context for 'APU' is selected.
+21:16:11 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+21:16:11 INFO  : 'configparams force-mem-access 1' command is executed.
+21:16:11 INFO  : Context for 'APU' is selected.
+21:16:11 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+21:16:37 ERROR : 'psu_init' is cancelled.
+21:16:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+----------------End of Script----------------
+
+21:16:37 INFO  : Issued abort command to xsdb.
+21:17:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:17:06 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+21:17:06 INFO  : 'jtag frequency' command is executed.
+21:17:06 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+21:17:06 INFO  : Context for 'APU' is selected.
+21:17:07 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+21:17:07 INFO  : 'configparams force-mem-access 1' command is executed.
+21:17:07 INFO  : Context for 'APU' is selected.
+21:17:07 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+21:17:08 INFO  : 'psu_init' command is executed.
+21:17:09 INFO  : 'after 1000' command is executed.
+21:17:09 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+21:17:10 INFO  : 'after 1000' command is executed.
+21:17:10 INFO  : 'psu_ps_pl_reset_config' command is executed.
+21:17:10 INFO  : 'catch {psu_protection}' command is executed.
+21:17:10 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:17:10 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+21:17:10 INFO  : The application 'E:/DPU_OpenSSD/Baremetal/SDK/DPU/Debug/DPU.elf' is downloaded to processor 'psu_cortexa53_0'.
+21:17:10 INFO  : 'configparams force-mem-access 0' command is executed.
+21:17:10 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -processor
+dow E:/DPU_OpenSSD/Baremetal/SDK/DPU/Debug/DPU.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:17:11 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:17:11 INFO  : 'con' command is executed.
+21:17:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+con
+----------------End of Script----------------
+
+21:17:11 INFO  : Launch script is exported to file 'E:\DPU_OpenSSD\Baremetal\SDK\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_dpu.elf_on_local.tcl'
+21:19:58 INFO  : Disconnected from the channel tcfchan#9.
+21:19:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:19:59 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+21:19:59 INFO  : 'jtag frequency' command is executed.
+21:19:59 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+21:19:59 INFO  : Context for 'APU' is selected.
+21:19:59 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+21:19:59 INFO  : 'configparams force-mem-access 1' command is executed.
+21:19:59 INFO  : Context for 'APU' is selected.
+21:19:59 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+21:20:00 INFO  : 'psu_init' command is executed.
+21:20:01 INFO  : 'after 1000' command is executed.
+21:20:01 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+21:20:02 INFO  : 'after 1000' command is executed.
+21:20:02 INFO  : 'psu_ps_pl_reset_config' command is executed.
+21:20:02 INFO  : 'catch {psu_protection}' command is executed.
+21:20:02 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:20:02 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+21:20:03 INFO  : The application 'E:/DPU_OpenSSD/Baremetal/SDK/DPU/Debug/DPU.elf' is downloaded to processor 'psu_cortexa53_0'.
+21:20:03 INFO  : 'configparams force-mem-access 0' command is executed.
+21:20:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -processor
+dow E:/DPU_OpenSSD/Baremetal/SDK/DPU/Debug/DPU.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:20:03 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:20:03 INFO  : 'con' command is executed.
+21:20:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+con
+----------------End of Script----------------
+
+21:20:03 INFO  : Launch script is exported to file 'E:\DPU_OpenSSD\Baremetal\SDK\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_dpu.elf_on_local.tcl'
+21:20:56 INFO  : Disconnected from the channel tcfchan#10.
+21:20:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:20:57 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+21:20:57 INFO  : 'jtag frequency' command is executed.
+21:20:57 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+21:20:57 INFO  : Context for 'APU' is selected.
+21:20:57 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+21:20:57 INFO  : 'configparams force-mem-access 1' command is executed.
+21:20:57 INFO  : Context for 'APU' is selected.
+21:20:57 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+21:20:58 INFO  : 'psu_init' command is executed.
+21:20:59 INFO  : 'after 1000' command is executed.
+21:20:59 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+21:21:00 INFO  : 'after 1000' command is executed.
+21:21:01 INFO  : 'psu_ps_pl_reset_config' command is executed.
+21:21:01 INFO  : 'catch {psu_protection}' command is executed.
+21:21:01 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:21:01 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+21:21:01 INFO  : The application 'E:/DPU_OpenSSD/Baremetal/SDK/DPU/Debug/DPU.elf' is downloaded to processor 'psu_cortexa53_0'.
+21:21:01 INFO  : 'configparams force-mem-access 0' command is executed.
+21:21:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -processor
+dow E:/DPU_OpenSSD/Baremetal/SDK/DPU/Debug/DPU.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:21:01 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:21:01 INFO  : 'con' command is executed.
+21:21:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+con
+----------------End of Script----------------
+
+21:21:01 INFO  : Launch script is exported to file 'E:\DPU_OpenSSD\Baremetal\SDK\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_dpu.elf_on_local.tcl'
+21:21:44 INFO  : Disconnected from the channel tcfchan#11.
+21:21:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:21:46 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+21:21:46 INFO  : 'jtag frequency' command is executed.
+21:21:46 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+21:21:46 INFO  : Context for 'APU' is selected.
+21:21:46 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+21:21:46 INFO  : 'configparams force-mem-access 1' command is executed.
+21:21:46 INFO  : Context for 'APU' is selected.
+21:21:46 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+21:21:55 ERROR : 'psu_init' is cancelled.
+21:21:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+----------------End of Script----------------
+
+21:21:55 INFO  : Issued abort command to xsdb.
+21:22:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:22:00 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+21:22:00 INFO  : 'jtag frequency' command is executed.
+21:22:00 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+21:22:00 INFO  : Context for 'APU' is selected.
+21:22:01 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+21:22:01 INFO  : 'configparams force-mem-access 1' command is executed.
+21:22:01 INFO  : Context for 'APU' is selected.
+21:22:01 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+21:22:02 INFO  : 'psu_init' command is executed.
+21:22:03 INFO  : 'after 1000' command is executed.
+21:22:03 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+21:22:04 INFO  : 'after 1000' command is executed.
+21:22:04 INFO  : 'psu_ps_pl_reset_config' command is executed.
+21:22:04 INFO  : 'catch {psu_protection}' command is executed.
+21:22:04 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:22:04 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+21:22:04 INFO  : The application 'E:/DPU_OpenSSD/Baremetal/SDK/DPU/Debug/DPU.elf' is downloaded to processor 'psu_cortexa53_0'.
+21:22:04 INFO  : 'configparams force-mem-access 0' command is executed.
+21:22:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -processor
+dow E:/DPU_OpenSSD/Baremetal/SDK/DPU/Debug/DPU.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:22:04 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:22:05 INFO  : 'con' command is executed.
+21:22:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+con
+----------------End of Script----------------
+
+21:22:05 INFO  : Launch script is exported to file 'E:\DPU_OpenSSD\Baremetal\SDK\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_dpu.elf_on_local.tcl'
+21:23:03 INFO  : Disconnected from the channel tcfchan#12.
+21:23:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:23:05 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+21:23:05 INFO  : 'jtag frequency' command is executed.
+21:23:05 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+21:23:05 INFO  : Context for 'APU' is selected.
+21:23:05 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+21:23:05 INFO  : 'configparams force-mem-access 1' command is executed.
+21:23:05 INFO  : Context for 'APU' is selected.
+21:23:05 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+21:23:06 INFO  : 'psu_init' command is executed.
+21:23:07 INFO  : 'after 1000' command is executed.
+21:23:07 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+21:23:08 INFO  : 'after 1000' command is executed.
+21:23:08 INFO  : 'psu_ps_pl_reset_config' command is executed.
+21:23:08 INFO  : 'catch {psu_protection}' command is executed.
+21:23:08 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:23:08 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+21:23:09 INFO  : The application 'E:/DPU_OpenSSD/Baremetal/SDK/DPU/Debug/DPU.elf' is downloaded to processor 'psu_cortexa53_0'.
+21:23:09 INFO  : 'configparams force-mem-access 0' command is executed.
+21:23:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -processor
+dow E:/DPU_OpenSSD/Baremetal/SDK/DPU/Debug/DPU.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:23:09 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:23:09 INFO  : 'con' command is executed.
+21:23:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+con
+----------------End of Script----------------
+
+21:23:09 INFO  : Launch script is exported to file 'E:\DPU_OpenSSD\Baremetal\SDK\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_dpu.elf_on_local.tcl'
+21:23:32 INFO  : Disconnected from the channel tcfchan#13.
+21:23:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:23:34 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+21:23:34 INFO  : 'jtag frequency' command is executed.
+21:23:34 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+21:23:34 INFO  : Context for 'APU' is selected.
+21:23:34 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+21:23:34 INFO  : 'configparams force-mem-access 1' command is executed.
+21:23:34 INFO  : Context for 'APU' is selected.
+21:23:34 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+21:23:35 INFO  : 'psu_init' command is executed.
+21:23:36 INFO  : 'after 1000' command is executed.
+21:23:36 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+21:23:37 INFO  : 'after 1000' command is executed.
+21:23:37 INFO  : 'psu_ps_pl_reset_config' command is executed.
+21:23:37 INFO  : 'catch {psu_protection}' command is executed.
+21:23:37 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:23:37 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+21:23:37 INFO  : The application 'E:/DPU_OpenSSD/Baremetal/SDK/DPU/Debug/DPU.elf' is downloaded to processor 'psu_cortexa53_0'.
+21:23:37 INFO  : 'configparams force-mem-access 0' command is executed.
+21:23:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -processor
+dow E:/DPU_OpenSSD/Baremetal/SDK/DPU/Debug/DPU.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:23:38 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:23:38 INFO  : 'con' command is executed.
+21:23:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+con
+----------------End of Script----------------
+
+21:23:38 INFO  : Launch script is exported to file 'E:\DPU_OpenSSD\Baremetal\SDK\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_dpu.elf_on_local.tcl'
+21:23:53 INFO  : Disconnected from the channel tcfchan#14.
+21:23:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:23:54 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+21:23:54 INFO  : 'jtag frequency' command is executed.
+21:23:54 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+21:23:55 INFO  : Context for 'APU' is selected.
+21:23:55 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+21:23:55 INFO  : 'configparams force-mem-access 1' command is executed.
+21:23:55 INFO  : Context for 'APU' is selected.
+21:23:55 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+21:24:04 ERROR : 'psu_init' is cancelled.
+21:24:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+----------------End of Script----------------
+
+21:24:04 INFO  : Issued abort command to xsdb.
+21:24:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:24:12 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+21:24:12 INFO  : 'jtag frequency' command is executed.
+21:24:12 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+21:24:12 INFO  : Context for 'APU' is selected.
+21:24:12 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+21:24:12 INFO  : 'configparams force-mem-access 1' command is executed.
+21:24:12 INFO  : Context for 'APU' is selected.
+21:24:12 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+21:24:13 INFO  : 'psu_init' command is executed.
+21:24:14 INFO  : 'after 1000' command is executed.
+21:24:14 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+21:24:15 INFO  : 'after 1000' command is executed.
+21:24:15 INFO  : 'psu_ps_pl_reset_config' command is executed.
+21:24:15 INFO  : 'catch {psu_protection}' command is executed.
+21:24:16 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:24:16 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+21:24:16 INFO  : The application 'E:/DPU_OpenSSD/Baremetal/SDK/DPU/Debug/DPU.elf' is downloaded to processor 'psu_cortexa53_0'.
+21:24:16 INFO  : 'configparams force-mem-access 0' command is executed.
+21:24:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -processor
+dow E:/DPU_OpenSSD/Baremetal/SDK/DPU/Debug/DPU.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:24:16 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:24:16 INFO  : 'con' command is executed.
+21:24:16 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+con
+----------------End of Script----------------
+
+21:24:16 INFO  : Launch script is exported to file 'E:\DPU_OpenSSD\Baremetal\SDK\.sdk\launch_scripts\performance_analysis\performance_analysis_using_debug_dpu.elf_on_local.tcl'
+21:24:17 INFO  : Apm configuration has been updated and stored to 'E:\DPU_OpenSSD\Baremetal\SDK\design_1_wrapper_hw_platform_0\apmconfigs\apm_default.json' for the project 'design_1_wrapper_hw_platform_0'
+21:24:18 INFO  : Performance data for 'PS' will be exported to the file 'E:\DPU_OpenSSD\Baremetal\SDK\design_1_wrapper_hw_platform_0_Traces\Traces\Run_一月-02_21-24\PS_Trace_一月-02_21-24\trace'
+21:24:18 INFO  : Performance data for 'APM' will be exported to the file 'E:\DPU_OpenSSD\Baremetal\SDK\design_1_wrapper_hw_platform_0_Traces\Traces\Run_一月-02_21-24\APM_Trace_一月-02_21-24\trace'
+21:24:18 ERROR : An unexpected error occurred while reading performance counters from hardware server.Memory read error at 0xFEF30E04. APB AP transaction error, DAP status 30000021
+21:24:18 WARN  : Received empty data from hardware server while reading PS & APM counters.
+21:24:18 INFO  : Performance data for 'PS' has been exported to the file 'E:\DPU_OpenSSD\Baremetal\SDK\design_1_wrapper_hw_platform_0_Traces\Traces\Run_一月-02_21-24\PS_Trace_一月-02_21-24\trace'
+21:24:18 INFO  : Performance data for 'APM (PS Master)' has been exported to the file 'E:\DPU_OpenSSD\Baremetal\SDK\design_1_wrapper_hw_platform_0_Traces\Traces\Run_一月-02_21-24\APM_Trace_一月-02_21-24\trace'
+21:28:04 INFO  : Performance data for 'PS' has been exported to the file 'E:\DPU_OpenSSD\Baremetal\SDK\design_1_wrapper_hw_platform_0_Traces\Traces\Run_一月-02_21-24\PS_Trace_一月-02_21-24\trace'
+21:28:04 INFO  : Performance data for 'APM (PS Master)' has been exported to the file 'E:\DPU_OpenSSD\Baremetal\SDK\design_1_wrapper_hw_platform_0_Traces\Traces\Run_一月-02_21-24\APM_Trace_一月-02_21-24\trace'
+21:28:04 INFO  : Disconnected from the channel tcfchan#15.
+21:28:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:28:05 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+21:28:05 INFO  : 'jtag frequency' command is executed.
+21:28:05 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+21:28:05 INFO  : Context for 'APU' is selected.
+21:28:05 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+21:28:05 INFO  : 'configparams force-mem-access 1' command is executed.
+21:28:05 INFO  : Context for 'APU' is selected.
+21:28:05 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+21:28:07 INFO  : 'psu_init' command is executed.
+21:28:08 INFO  : 'after 1000' command is executed.
+21:28:08 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+21:28:09 INFO  : 'after 1000' command is executed.
+21:28:09 INFO  : 'psu_ps_pl_reset_config' command is executed.
+21:28:09 INFO  : 'catch {psu_protection}' command is executed.
+21:28:09 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:28:09 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+21:28:09 INFO  : The application 'E:/DPU_OpenSSD/Baremetal/SDK/DPU/Debug/DPU.elf' is downloaded to processor 'psu_cortexa53_0'.
+21:28:09 INFO  : 'configparams force-mem-access 0' command is executed.
+21:28:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -processor
+dow E:/DPU_OpenSSD/Baremetal/SDK/DPU/Debug/DPU.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:28:09 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:28:09 INFO  : 'con' command is executed.
+21:28:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+con
+----------------End of Script----------------
+
+21:28:09 INFO  : Launch script is exported to file 'E:\DPU_OpenSSD\Baremetal\SDK\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_dpu.elf_on_local.tcl'
+21:28:59 INFO  : Disconnected from the channel tcfchan#16.
+21:29:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:29:00 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+21:29:00 INFO  : 'jtag frequency' command is executed.
+21:29:00 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+21:29:00 INFO  : Context for 'APU' is selected.
+21:29:00 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+21:29:00 INFO  : 'configparams force-mem-access 1' command is executed.
+21:29:00 INFO  : Context for 'APU' is selected.
+21:29:00 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+21:29:02 INFO  : 'psu_init' command is executed.
+21:29:03 INFO  : 'after 1000' command is executed.
+21:29:03 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+21:29:04 INFO  : 'after 1000' command is executed.
+21:29:04 INFO  : 'psu_ps_pl_reset_config' command is executed.
+21:29:04 INFO  : 'catch {psu_protection}' command is executed.
+21:29:04 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:29:04 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+21:29:04 INFO  : The application 'E:/DPU_OpenSSD/Baremetal/SDK/DPU/Debug/DPU.elf' is downloaded to processor 'psu_cortexa53_0'.
+21:29:04 INFO  : 'configparams force-mem-access 0' command is executed.
+21:29:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -processor
+dow E:/DPU_OpenSSD/Baremetal/SDK/DPU/Debug/DPU.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:29:04 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:29:04 INFO  : 'con' command is executed.
+21:29:04 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+con
+----------------End of Script----------------
+
+21:29:04 INFO  : Launch script is exported to file 'E:\DPU_OpenSSD\Baremetal\SDK\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_dpu.elf_on_local.tcl'
+21:29:46 INFO  : Disconnected from the channel tcfchan#17.
+21:29:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:29:47 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+21:29:47 INFO  : 'jtag frequency' command is executed.
+21:29:47 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+21:29:47 INFO  : Context for 'APU' is selected.
+21:29:48 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+21:29:48 INFO  : 'configparams force-mem-access 1' command is executed.
+21:29:48 INFO  : Context for 'APU' is selected.
+21:29:48 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+21:29:55 ERROR : 'psu_init' is cancelled.
+21:29:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+----------------End of Script----------------
+
+21:29:55 INFO  : Issued abort command to xsdb.
+21:30:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:30:00 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+21:30:00 INFO  : 'jtag frequency' command is executed.
+21:30:00 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+21:30:00 INFO  : Context for 'APU' is selected.
+21:30:00 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+21:30:00 INFO  : 'configparams force-mem-access 1' command is executed.
+21:30:00 INFO  : Context for 'APU' is selected.
+21:30:00 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+21:30:02 INFO  : 'psu_init' command is executed.
+21:30:03 INFO  : 'after 1000' command is executed.
+21:30:03 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+21:30:04 INFO  : 'after 1000' command is executed.
+21:30:04 INFO  : 'psu_ps_pl_reset_config' command is executed.
+21:30:04 INFO  : 'catch {psu_protection}' command is executed.
+21:30:04 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:30:04 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+21:30:04 INFO  : The application 'E:/DPU_OpenSSD/Baremetal/SDK/DPU/Debug/DPU.elf' is downloaded to processor 'psu_cortexa53_0'.
+21:30:04 INFO  : 'configparams force-mem-access 0' command is executed.
+21:30:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -processor
+dow E:/DPU_OpenSSD/Baremetal/SDK/DPU/Debug/DPU.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:30:04 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:30:04 INFO  : 'con' command is executed.
+21:30:04 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+con
+----------------End of Script----------------
+
+21:30:04 INFO  : Launch script is exported to file 'E:\DPU_OpenSSD\Baremetal\SDK\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_dpu.elf_on_local.tcl'
+21:33:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:33:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0} -index 0' command is executed.
+21:33:32 INFO  : FPGA configured successfully with bitstream "E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+21:33:48 INFO  : Disconnected from the channel tcfchan#18.
+21:33:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:33:50 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+21:33:50 INFO  : 'jtag frequency' command is executed.
+21:33:50 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+21:33:50 INFO  : Context for 'APU' is selected.
+21:33:50 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+21:33:50 INFO  : 'configparams force-mem-access 1' command is executed.
+21:33:50 INFO  : Context for 'APU' is selected.
+21:33:50 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+21:33:51 INFO  : 'psu_init' command is executed.
+21:33:52 INFO  : 'after 1000' command is executed.
+21:33:52 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+21:33:53 INFO  : 'after 1000' command is executed.
+21:33:53 INFO  : 'psu_ps_pl_reset_config' command is executed.
+21:33:53 INFO  : 'catch {psu_protection}' command is executed.
+21:33:53 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:33:53 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+21:33:54 INFO  : The application 'E:/DPU_OpenSSD/Baremetal/SDK/DPU/Debug/DPU.elf' is downloaded to processor 'psu_cortexa53_0'.
+21:33:54 INFO  : 'configparams force-mem-access 0' command is executed.
+21:33:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -processor
+dow E:/DPU_OpenSSD/Baremetal/SDK/DPU/Debug/DPU.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:33:54 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:33:54 INFO  : 'con' command is executed.
+21:33:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+con
+----------------End of Script----------------
+
+21:33:54 INFO  : Launch script is exported to file 'E:\DPU_OpenSSD\Baremetal\SDK\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_dpu.elf_on_local.tcl'
+21:34:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:34:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0} -index 0' command is executed.
+21:35:03 INFO  : FPGA configured successfully with bitstream "E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+21:35:10 INFO  : Disconnected from the channel tcfchan#19.
+21:35:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:35:11 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+21:35:11 INFO  : 'jtag frequency' command is executed.
+21:35:11 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+21:35:11 INFO  : Context for 'APU' is selected.
+21:35:11 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+21:35:11 INFO  : 'configparams force-mem-access 1' command is executed.
+21:35:11 INFO  : Context for 'APU' is selected.
+21:35:11 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+21:35:13 INFO  : 'psu_init' command is executed.
+21:35:14 INFO  : 'after 1000' command is executed.
+21:35:14 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+21:35:15 INFO  : 'after 1000' command is executed.
+21:35:15 INFO  : 'psu_ps_pl_reset_config' command is executed.
+21:35:15 INFO  : 'catch {psu_protection}' command is executed.
+21:35:15 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:35:15 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+21:35:15 INFO  : The application 'E:/DPU_OpenSSD/Baremetal/SDK/DPU/Debug/DPU.elf' is downloaded to processor 'psu_cortexa53_0'.
+21:35:15 INFO  : 'configparams force-mem-access 0' command is executed.
+21:35:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -processor
+dow E:/DPU_OpenSSD/Baremetal/SDK/DPU/Debug/DPU.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:35:16 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:35:16 INFO  : 'con' command is executed.
+21:35:16 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+con
+----------------End of Script----------------
+
+21:35:16 INFO  : Launch script is exported to file 'E:\DPU_OpenSSD\Baremetal\SDK\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_dpu.elf_on_local.tcl'
+21:36:47 INFO  : Disconnected from the channel tcfchan#20.
+21:36:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:36:49 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+21:36:49 INFO  : 'jtag frequency' command is executed.
+21:36:49 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+21:36:49 INFO  : Context for 'APU' is selected.
+21:36:50 INFO  : System reset is completed.
+21:36:53 INFO  : 'after 3000' command is executed.
+21:36:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0} -index 0' command is executed.
+21:36:56 INFO  : FPGA configured successfully with bitstream "E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+21:36:56 INFO  : Context for 'APU' is selected.
+21:36:56 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+21:36:56 INFO  : 'configparams force-mem-access 1' command is executed.
+21:36:56 INFO  : Context for 'APU' is selected.
+21:36:56 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+21:36:57 INFO  : 'psu_init' command is executed.
+21:36:58 INFO  : 'after 1000' command is executed.
+21:36:58 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+21:36:59 INFO  : 'after 1000' command is executed.
+21:36:59 INFO  : 'psu_ps_pl_reset_config' command is executed.
+21:36:59 INFO  : 'catch {psu_protection}' command is executed.
+21:37:00 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:37:00 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+21:37:00 INFO  : The application 'E:/DPU_OpenSSD/Baremetal/SDK/DPU/Debug/DPU.elf' is downloaded to processor 'psu_cortexa53_0'.
+21:37:00 INFO  : 'configparams force-mem-access 0' command is executed.
+21:37:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0} -index 0
+fpga -file E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -processor
+dow E:/DPU_OpenSSD/Baremetal/SDK/DPU/Debug/DPU.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:37:00 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:37:00 INFO  : 'con' command is executed.
+21:37:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+con
+----------------End of Script----------------
+
+21:37:00 INFO  : Launch script is exported to file 'E:\DPU_OpenSSD\Baremetal\SDK\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_dpu.elf_on_local.tcl'
+21:40:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:40:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0} -index 0' command is executed.
+21:40:53 INFO  : FPGA configured successfully with bitstream "E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+21:40:59 INFO  : Disconnected from the channel tcfchan#21.
+21:41:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:41:00 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+21:41:00 INFO  : 'jtag frequency' command is executed.
+21:41:00 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+21:41:00 INFO  : Context for 'APU' is selected.
+21:41:00 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+21:41:00 INFO  : 'configparams force-mem-access 1' command is executed.
+21:41:00 INFO  : Context for 'APU' is selected.
+21:41:00 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+21:41:01 INFO  : 'psu_init' command is executed.
+21:41:02 INFO  : 'after 1000' command is executed.
+21:41:02 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+21:41:03 INFO  : 'after 1000' command is executed.
+21:41:04 INFO  : 'psu_ps_pl_reset_config' command is executed.
+21:41:04 INFO  : 'catch {psu_protection}' command is executed.
+21:41:04 INFO  : Context for 'APU' is selected.
+21:41:04 INFO  : 32 bit mode is enabled on 'psu_cortexa53_0'
+21:41:04 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:41:04 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+21:41:04 INFO  : The application 'E:/DPU_OpenSSD/Baremetal/SDK/DPU32/Debug/DPU32.elf' is downloaded to processor 'psu_cortexa53_0'.
+21:41:04 INFO  : 'configparams force-mem-access 0' command is executed.
+21:41:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+enable_a32_mode 0
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -processor
+dow E:/DPU_OpenSSD/Baremetal/SDK/DPU32/Debug/DPU32.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:41:04 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:41:04 INFO  : 'con' command is executed.
+21:41:04 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+con
+----------------End of Script----------------
+
+21:41:04 INFO  : Launch script is exported to file 'E:\DPU_OpenSSD\Baremetal\SDK\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_dpu32.elf_on_local.tcl'
+21:42:15 INFO  : Refreshed build settings on project DPU32
+21:45:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:45:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0} -index 0' command is executed.
+21:45:48 INFO  : FPGA configured successfully with bitstream "E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+21:45:54 INFO  : Disconnected from the channel tcfchan#22.
+21:45:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:45:56 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+21:45:56 INFO  : 'jtag frequency' command is executed.
+21:45:56 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+21:45:56 INFO  : Context for 'APU' is selected.
+21:45:56 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+21:45:56 INFO  : 'configparams force-mem-access 1' command is executed.
+21:45:56 INFO  : Context for 'APU' is selected.
+21:45:56 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+21:45:57 INFO  : 'psu_init' command is executed.
+21:45:58 INFO  : 'after 1000' command is executed.
+21:45:58 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+21:45:59 INFO  : 'after 1000' command is executed.
+21:45:59 INFO  : 'psu_ps_pl_reset_config' command is executed.
+21:45:59 INFO  : 'catch {psu_protection}' command is executed.
+21:45:59 INFO  : Context for 'APU' is selected.
+21:45:59 INFO  : 32 bit mode is enabled on 'psu_cortexa53_0'
+21:45:59 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:45:59 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+21:46:00 INFO  : The application 'E:/DPU_OpenSSD/Baremetal/SDK/DPUTest/Debug/DPUTest.elf' is downloaded to processor 'psu_cortexa53_0'.
+21:46:00 INFO  : 'configparams force-mem-access 0' command is executed.
+21:46:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+enable_a32_mode 0
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -processor
+dow E:/DPU_OpenSSD/Baremetal/SDK/DPUTest/Debug/DPUTest.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:46:00 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:46:00 INFO  : 'con' command is executed.
+21:46:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+con
+----------------End of Script----------------
+
+21:46:00 INFO  : Launch script is exported to file 'E:\DPU_OpenSSD\Baremetal\SDK\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_dputest.elf_on_local.tcl'
+21:46:12 INFO  : Disconnected from the channel tcfchan#23.
+21:46:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:46:14 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+21:46:14 INFO  : 'jtag frequency' command is executed.
+21:46:14 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+21:46:14 INFO  : Context for 'APU' is selected.
+21:46:14 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+21:46:14 INFO  : 'configparams force-mem-access 1' command is executed.
+21:46:14 INFO  : Context for 'APU' is selected.
+21:46:14 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+21:46:18 ERROR : 'psu_init' is cancelled.
+21:46:18 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+----------------End of Script----------------
+
+21:46:18 INFO  : Issued abort command to xsdb.
+21:46:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:46:23 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+21:46:23 INFO  : 'jtag frequency' command is executed.
+21:46:23 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+21:46:23 INFO  : Context for 'APU' is selected.
+21:46:23 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+21:46:23 INFO  : 'configparams force-mem-access 1' command is executed.
+21:46:23 INFO  : Context for 'APU' is selected.
+21:46:23 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+21:46:24 INFO  : 'psu_init' command is executed.
+21:46:25 INFO  : 'after 1000' command is executed.
+21:46:25 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+21:46:26 INFO  : 'after 1000' command is executed.
+21:46:26 INFO  : 'psu_ps_pl_reset_config' command is executed.
+21:46:26 INFO  : 'catch {psu_protection}' command is executed.
+21:46:26 INFO  : Context for 'APU' is selected.
+21:46:26 INFO  : 32 bit mode is enabled on 'psu_cortexa53_0'
+21:46:26 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:46:27 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+21:46:27 INFO  : The application 'E:/DPU_OpenSSD/Baremetal/SDK/DPUTest/Debug/DPUTest.elf' is downloaded to processor 'psu_cortexa53_0'.
+21:46:27 INFO  : 'configparams force-mem-access 0' command is executed.
+21:46:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+enable_a32_mode 0
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -processor
+dow E:/DPU_OpenSSD/Baremetal/SDK/DPUTest/Debug/DPUTest.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:46:27 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:46:27 INFO  : 'con' command is executed.
+21:46:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+con
+----------------End of Script----------------
+
+21:46:27 INFO  : Launch script is exported to file 'E:\DPU_OpenSSD\Baremetal\SDK\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_dputest.elf_on_local.tcl'
+21:47:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:47:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0} -index 0' command is executed.
+21:47:48 INFO  : FPGA configured successfully with bitstream "E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+21:47:56 INFO  : Disconnected from the channel tcfchan#24.
+21:47:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:47:57 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+21:47:57 INFO  : 'jtag frequency' command is executed.
+21:47:57 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+21:47:57 INFO  : Context for 'APU' is selected.
+21:47:57 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+21:47:57 INFO  : 'configparams force-mem-access 1' command is executed.
+21:47:57 INFO  : Context for 'APU' is selected.
+21:47:57 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+21:47:59 INFO  : 'psu_init' command is executed.
+21:48:00 INFO  : 'after 1000' command is executed.
+21:48:00 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+21:48:01 INFO  : 'after 1000' command is executed.
+21:48:01 INFO  : 'psu_ps_pl_reset_config' command is executed.
+21:48:01 INFO  : 'catch {psu_protection}' command is executed.
+21:48:01 INFO  : Context for 'APU' is selected.
+21:48:01 INFO  : 32 bit mode is enabled on 'psu_cortexa53_0'
+21:48:01 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:48:01 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+21:48:01 INFO  : The application 'E:/DPU_OpenSSD/Baremetal/SDK/DPUTest/Debug/DPUTest.elf' is downloaded to processor 'psu_cortexa53_0'.
+21:48:01 INFO  : 'configparams force-mem-access 0' command is executed.
+21:48:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+enable_a32_mode 0
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -processor
+dow E:/DPU_OpenSSD/Baremetal/SDK/DPUTest/Debug/DPUTest.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:48:01 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:48:01 INFO  : 'con' command is executed.
+21:48:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+con
+----------------End of Script----------------
+
+21:48:01 INFO  : Launch script is exported to file 'E:\DPU_OpenSSD\Baremetal\SDK\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_dputest.elf_on_local.tcl'
+21:49:33 INFO  : Disconnected from the channel tcfchan#25.
+21:49:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:49:34 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+21:49:34 INFO  : 'jtag frequency' command is executed.
+21:49:34 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+21:49:34 INFO  : Context for 'APU' is selected.
+21:49:34 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+21:49:34 INFO  : 'configparams force-mem-access 1' command is executed.
+21:49:34 INFO  : Context for 'APU' is selected.
+21:49:34 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+21:49:45 ERROR : 'psu_init' is cancelled.
+21:49:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+----------------End of Script----------------
+
+21:49:45 INFO  : Issued abort command to xsdb.
+21:49:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:49:59 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+21:49:59 INFO  : 'jtag frequency' command is executed.
+21:49:59 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+21:49:59 INFO  : Context for 'APU' is selected.
+21:49:59 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+21:49:59 INFO  : 'configparams force-mem-access 1' command is executed.
+21:49:59 INFO  : Context for 'APU' is selected.
+21:49:59 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+21:50:00 INFO  : 'psu_init' command is executed.
+21:50:01 INFO  : 'after 1000' command is executed.
+21:50:01 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+21:50:02 INFO  : 'after 1000' command is executed.
+21:50:02 INFO  : 'psu_ps_pl_reset_config' command is executed.
+21:50:02 INFO  : 'catch {psu_protection}' command is executed.
+21:50:02 INFO  : Context for 'APU' is selected.
+21:50:03 INFO  : 32 bit mode is enabled on 'psu_cortexa53_0'
+21:50:03 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:50:03 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+21:50:03 INFO  : The application 'E:/DPU_OpenSSD/Baremetal/SDK/DPUTest/Debug/DPUTest.elf' is downloaded to processor 'psu_cortexa53_0'.
+21:50:03 INFO  : 'configparams force-mem-access 0' command is executed.
+21:50:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+enable_a32_mode 0
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -processor
+dow E:/DPU_OpenSSD/Baremetal/SDK/DPUTest/Debug/DPUTest.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:50:03 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:50:03 INFO  : 'con' command is executed.
+21:50:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+con
+----------------End of Script----------------
+
+21:50:03 INFO  : Launch script is exported to file 'E:\DPU_OpenSSD\Baremetal\SDK\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_dputest.elf_on_local.tcl'
+21:51:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:51:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0} -index 0' command is executed.
+21:51:08 INFO  : FPGA configured successfully with bitstream "E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+21:53:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:53:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0} -index 0' command is executed.
+21:53:39 INFO  : FPGA configured successfully with bitstream "E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+21:53:47 INFO  : Disconnected from the channel tcfchan#26.
+21:53:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:53:48 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+21:53:48 INFO  : 'jtag frequency' command is executed.
+21:53:48 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+21:53:48 INFO  : Context for 'APU' is selected.
+21:53:48 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+21:53:48 INFO  : 'configparams force-mem-access 1' command is executed.
+21:53:48 INFO  : Context for 'APU' is selected.
+21:53:48 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+21:53:50 INFO  : 'psu_init' command is executed.
+21:53:51 INFO  : 'after 1000' command is executed.
+21:53:51 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+21:53:52 INFO  : 'after 1000' command is executed.
+21:53:52 INFO  : 'psu_ps_pl_reset_config' command is executed.
+21:53:52 INFO  : 'catch {psu_protection}' command is executed.
+21:53:52 INFO  : Context for 'APU' is selected.
+21:53:52 INFO  : 32 bit mode is enabled on 'psu_cortexa53_0'
+21:53:52 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:53:52 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+21:53:52 INFO  : The application 'E:/DPU_OpenSSD/Baremetal/SDK/DPUTest/Debug/DPUTest.elf' is downloaded to processor 'psu_cortexa53_0'.
+21:53:52 INFO  : 'configparams force-mem-access 0' command is executed.
+21:53:52 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+enable_a32_mode 0
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -processor
+dow E:/DPU_OpenSSD/Baremetal/SDK/DPUTest/Debug/DPUTest.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:53:53 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:53:53 INFO  : 'con' command is executed.
+21:53:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+con
+----------------End of Script----------------
+
+21:53:53 INFO  : Launch script is exported to file 'E:\DPU_OpenSSD\Baremetal\SDK\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_dputest.elf_on_local.tcl'
+21:55:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:55:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0} -index 0' command is executed.
+21:55:31 INFO  : FPGA configured successfully with bitstream "E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+21:55:39 INFO  : Disconnected from the channel tcfchan#27.
+21:55:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:55:40 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+21:55:40 INFO  : 'jtag frequency' command is executed.
+21:55:40 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+21:55:40 INFO  : Context for 'APU' is selected.
+21:55:41 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+21:55:41 INFO  : 'configparams force-mem-access 1' command is executed.
+21:55:41 INFO  : Context for 'APU' is selected.
+21:55:41 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+21:55:42 INFO  : 'psu_init' command is executed.
+21:55:43 INFO  : 'after 1000' command is executed.
+21:55:43 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+21:55:44 INFO  : 'after 1000' command is executed.
+21:55:44 INFO  : 'psu_ps_pl_reset_config' command is executed.
+21:55:44 INFO  : 'catch {psu_protection}' command is executed.
+21:55:44 INFO  : Context for 'APU' is selected.
+21:55:44 INFO  : 32 bit mode is enabled on 'psu_cortexa53_0'
+21:55:44 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:55:44 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+21:55:44 INFO  : The application 'E:/DPU_OpenSSD/Baremetal/SDK/DPUTest/Debug/DPUTest.elf' is downloaded to processor 'psu_cortexa53_0'.
+21:55:45 INFO  : 'configparams force-mem-access 0' command is executed.
+21:55:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+enable_a32_mode 0
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -processor
+dow E:/DPU_OpenSSD/Baremetal/SDK/DPUTest/Debug/DPUTest.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:55:45 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:55:45 INFO  : 'con' command is executed.
+21:55:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+con
+----------------End of Script----------------
+
+21:55:45 INFO  : Launch script is exported to file 'E:\DPU_OpenSSD\Baremetal\SDK\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_dputest.elf_on_local.tcl'
+21:56:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:56:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0} -index 0' command is executed.
+21:56:24 INFO  : FPGA configured successfully with bitstream "E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+21:56:36 INFO  : Disconnected from the channel tcfchan#28.
+21:56:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:56:37 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+21:56:37 INFO  : 'jtag frequency' command is executed.
+21:56:37 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+21:56:37 INFO  : Context for 'APU' is selected.
+21:56:37 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+21:56:37 INFO  : 'configparams force-mem-access 1' command is executed.
+21:56:37 INFO  : Context for 'APU' is selected.
+21:56:37 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+21:56:39 INFO  : 'psu_init' command is executed.
+21:56:40 INFO  : 'after 1000' command is executed.
+21:56:40 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+21:56:41 INFO  : 'after 1000' command is executed.
+21:56:41 INFO  : 'psu_ps_pl_reset_config' command is executed.
+21:56:41 INFO  : 'catch {psu_protection}' command is executed.
+21:56:41 INFO  : Context for 'APU' is selected.
+21:56:41 INFO  : 32 bit mode is enabled on 'psu_cortexa53_0'
+21:56:41 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:56:41 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+21:56:41 INFO  : The application 'E:/DPU_OpenSSD/Baremetal/SDK/DPUTest/Debug/DPUTest.elf' is downloaded to processor 'psu_cortexa53_0'.
+21:56:41 INFO  : 'configparams force-mem-access 0' command is executed.
+21:56:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+enable_a32_mode 0
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -processor
+dow E:/DPU_OpenSSD/Baremetal/SDK/DPUTest/Debug/DPUTest.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:56:41 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:56:41 INFO  : 'con' command is executed.
+21:56:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+con
+----------------End of Script----------------
+
+21:56:41 INFO  : Launch script is exported to file 'E:\DPU_OpenSSD\Baremetal\SDK\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_dputest.elf_on_local.tcl'
+21:58:39 INFO  : Restoring File Contents to Memory...
+21:58:41 ERROR : Failed to Restore File Contents to Memory, Reason: TCF command exception:
+Command: Memory set "JTAG-jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-5ba00477-0A0", 2015887360, 4, 150528, 0, "KiMbKyQcLCUdLiYeLicfLicfLyggLyggLyggLykhLykhLyghMCkiMCkiMCkiMSoiMSojMSojMiojMSkiMSkiMSoiMisjMSoiMis...
+Exception: Memory write error at 0x78280000. APU L2 cache is held in reset
+Error code: 1
+21:59:03 INFO  : Restoring File Contents to Memory...
+21:59:03 ERROR : Failed to Restore File Contents to Memory, Reason: TCF command exception:
+Command: Memory set "JTAG-jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-5ba00477-0A0", 2020605952, 4, 150528, 0, "KiMbKyQcLCUdLiYeLicfLicfLyggLyggLyggLykhLykhLyghMCkiMCkiMCkiMSoiMSojMSojMiojMSkiMSkiMSoiMisjMSoiMis...
+Exception: Memory write error at 0x78700000. APU L2 cache is held in reset
+Error code: 1
+21:59:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:59:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0} -index 0' command is executed.
+21:59:20 INFO  : FPGA configured successfully with bitstream "E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+21:59:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:59:42 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+21:59:42 INFO  : 'jtag frequency' command is executed.
+21:59:42 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+21:59:42 INFO  : Context for 'APU' is selected.
+21:59:42 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+21:59:42 INFO  : 'configparams force-mem-access 1' command is executed.
+21:59:42 INFO  : Context for 'APU' is selected.
+21:59:42 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+21:59:43 INFO  : 'psu_init' command is executed.
+21:59:44 INFO  : 'after 1000' command is executed.
+21:59:44 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+21:59:45 INFO  : 'after 1000' command is executed.
+21:59:45 INFO  : 'psu_ps_pl_reset_config' command is executed.
+21:59:45 INFO  : 'catch {psu_protection}' command is executed.
+21:59:45 INFO  : Context for 'APU' is selected.
+21:59:45 INFO  : 32 bit mode is enabled on 'psu_cortexa53_0'
+21:59:45 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:59:45 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+21:59:46 INFO  : The application 'E:/DPU_OpenSSD/Baremetal/SDK/DPUTest/Debug/DPUTest.elf' is downloaded to processor 'psu_cortexa53_0'.
+21:59:46 INFO  : 'configparams force-mem-access 0' command is executed.
+21:59:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+enable_a32_mode 0
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -processor
+dow E:/DPU_OpenSSD/Baremetal/SDK/DPUTest/Debug/DPUTest.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:59:46 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:59:46 INFO  : 'con' command is executed.
+21:59:46 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+con
+----------------End of Script----------------
+
+21:59:46 INFO  : Launch script is exported to file 'E:\DPU_OpenSSD\Baremetal\SDK\.sdk\launch_scripts\performance_analysis\performance_analysis_using_debug_dputest.elf_on_local.tcl'
+21:59:47 INFO  : Performance data for 'PS' will be exported to the file 'E:\DPU_OpenSSD\Baremetal\SDK\design_1_wrapper_hw_platform_0_Traces\Traces\Run_一月-02_21-59\PS_Trace_一月-02_21-59\trace'
+21:59:47 INFO  : Performance data for 'APM' will be exported to the file 'E:\DPU_OpenSSD\Baremetal\SDK\design_1_wrapper_hw_platform_0_Traces\Traces\Run_一月-02_21-59\APM_Trace_一月-02_21-59\trace'
+21:59:47 ERROR : An unexpected error occurred while reading performance counters from hardware server.Memory read error at 0xFEF30E04. APB AP transaction error, DAP status 30000021
+21:59:47 WARN  : Received empty data from hardware server while reading PS & APM counters.
+21:59:47 INFO  : Performance data for 'PS' has been exported to the file 'E:\DPU_OpenSSD\Baremetal\SDK\design_1_wrapper_hw_platform_0_Traces\Traces\Run_一月-02_21-59\PS_Trace_一月-02_21-59\trace'
+21:59:47 INFO  : Performance data for 'APM (PS Master)' has been exported to the file 'E:\DPU_OpenSSD\Baremetal\SDK\design_1_wrapper_hw_platform_0_Traces\Traces\Run_一月-02_21-59\APM_Trace_一月-02_21-59\trace'
+22:00:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:00:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0} -index 0' command is executed.
+22:00:06 INFO  : FPGA configured successfully with bitstream "E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+22:00:10 INFO  : Disconnected from the channel tcfchan#29.
+22:00:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:00:12 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+22:00:12 INFO  : 'jtag frequency' command is executed.
+22:00:12 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+22:00:12 INFO  : Context for 'APU' is selected.
+22:00:12 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+22:00:12 INFO  : 'configparams force-mem-access 1' command is executed.
+22:00:12 INFO  : Context for 'APU' is selected.
+22:00:12 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+22:00:13 INFO  : 'psu_init' command is executed.
+22:00:14 INFO  : 'after 1000' command is executed.
+22:00:14 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+22:00:15 INFO  : 'after 1000' command is executed.
+22:00:15 INFO  : 'psu_ps_pl_reset_config' command is executed.
+22:00:15 INFO  : 'catch {psu_protection}' command is executed.
+22:00:15 INFO  : Context for 'APU' is selected.
+22:00:15 INFO  : 32 bit mode is enabled on 'psu_cortexa53_0'
+22:00:15 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+22:00:15 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+22:00:16 INFO  : The application 'E:/DPU_OpenSSD/Baremetal/SDK/DPUTest/Debug/DPUTest.elf' is downloaded to processor 'psu_cortexa53_0'.
+22:00:16 INFO  : 'configparams force-mem-access 0' command is executed.
+22:00:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+enable_a32_mode 0
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -processor
+dow E:/DPU_OpenSSD/Baremetal/SDK/DPUTest/Debug/DPUTest.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:00:16 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+22:00:16 INFO  : 'con' command is executed.
+22:00:16 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+con
+----------------End of Script----------------
+
+22:00:16 INFO  : Launch script is exported to file 'E:\DPU_OpenSSD\Baremetal\SDK\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_dputest.elf_on_local.tcl'
+22:00:46 INFO  : Restoring File Contents to Memory...
+22:00:53 INFO  : Restored Contents to Memory Successfully from File E:\DPU_OpenSSD\Baremetal\Xilinx_DPU_Baremetal\mobilenetv2\binary\input.bin
+22:01:25 INFO  : Restoring File Contents to Memory...
+22:01:49 INFO  : Restored Contents to Memory Successfully from File E:\DPU_OpenSSD\Baremetal\Xilinx_DPU_Baremetal\mobilenetv2\binary\instruction.bin
+22:01:57 INFO  : Restoring File Contents to Memory...
+22:05:10 INFO  : Restored Contents to Memory Successfully from File E:\DPU_OpenSSD\Baremetal\Xilinx_DPU_Baremetal\mobilenetv2\binary\weight.bin
+22:05:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:05:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0} -index 0' command is executed.
+22:05:42 INFO  : FPGA configured successfully with bitstream "E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+22:05:48 INFO  : Disconnected from the channel tcfchan#32.
+22:05:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:05:49 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+22:05:49 INFO  : 'jtag frequency' command is executed.
+22:05:49 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+22:05:49 INFO  : Context for 'APU' is selected.
+22:05:49 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+22:05:49 INFO  : 'configparams force-mem-access 1' command is executed.
+22:05:49 INFO  : Context for 'APU' is selected.
+22:05:49 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+22:05:50 INFO  : 'psu_init' command is executed.
+22:05:51 INFO  : 'after 1000' command is executed.
+22:05:52 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+22:05:53 INFO  : 'after 1000' command is executed.
+22:05:53 INFO  : 'psu_ps_pl_reset_config' command is executed.
+22:05:53 INFO  : 'catch {psu_protection}' command is executed.
+22:05:53 INFO  : Context for 'APU' is selected.
+22:05:53 INFO  : 32 bit mode is enabled on 'psu_cortexa53_0'
+22:05:53 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+22:05:53 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+22:05:53 INFO  : The application 'E:/DPU_OpenSSD/Baremetal/SDK/DPUTest/Debug/DPUTest.elf' is downloaded to processor 'psu_cortexa53_0'.
+22:05:53 INFO  : 'configparams force-mem-access 0' command is executed.
+22:05:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+enable_a32_mode 0
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -processor
+dow E:/DPU_OpenSSD/Baremetal/SDK/DPUTest/Debug/DPUTest.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:05:53 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+22:05:53 INFO  : 'con' command is executed.
+22:05:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+con
+----------------End of Script----------------
+
+22:05:53 INFO  : Launch script is exported to file 'E:\DPU_OpenSSD\Baremetal\SDK\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_dputest.elf_on_local.tcl'
+22:06:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:06:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0} -index 0' command is executed.
+22:06:53 INFO  : FPGA configured successfully with bitstream "E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+22:07:00 INFO  : Disconnected from the channel tcfchan#33.
+22:07:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:07:01 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+22:07:01 INFO  : 'jtag frequency' command is executed.
+22:07:01 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+22:07:01 INFO  : Context for 'APU' is selected.
+22:07:01 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+22:07:01 INFO  : 'configparams force-mem-access 1' command is executed.
+22:07:02 INFO  : Context for 'APU' is selected.
+22:07:02 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+22:07:03 INFO  : 'psu_init' command is executed.
+22:07:04 INFO  : 'after 1000' command is executed.
+22:07:04 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+22:07:05 INFO  : 'after 1000' command is executed.
+22:07:05 INFO  : 'psu_ps_pl_reset_config' command is executed.
+22:07:05 INFO  : 'catch {psu_protection}' command is executed.
+22:07:05 INFO  : Context for 'APU' is selected.
+22:07:05 INFO  : 32 bit mode is enabled on 'psu_cortexa53_0'
+22:07:05 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+22:07:05 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+22:07:05 INFO  : The application 'E:/DPU_OpenSSD/Baremetal/SDK/DPUTest/Debug/DPUTest.elf' is downloaded to processor 'psu_cortexa53_0'.
+22:07:05 INFO  : 'configparams force-mem-access 0' command is executed.
+22:07:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+enable_a32_mode 0
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -processor
+dow E:/DPU_OpenSSD/Baremetal/SDK/DPUTest/Debug/DPUTest.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:07:05 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+22:07:06 INFO  : 'con' command is executed.
+22:07:06 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+con
+----------------End of Script----------------
+
+22:07:06 INFO  : Launch script is exported to file 'E:\DPU_OpenSSD\Baremetal\SDK\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_dputest.elf_on_local.tcl'
+22:07:59 WARN  : channel "tcfchan#29" closed
+22:07:59 INFO  : Disconnected from the channel tcfchan#34.
+09:44:56 INFO  : Registering command handlers for SDK TCF services
+09:44:59 INFO  : Launching XSCT server: xsct.bat -interactive E:\DPU_OpenSSD\Baremetal\SDK\temp_xsdb_launch_script.tcl
+09:45:04 INFO  : XSCT server has started successfully.
+09:45:13 INFO  : Successfully done setting XSCT server connection channel  
+09:45:13 INFO  : Successfully done setting SDK workspace  
+09:45:28 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1609724312362,  Project:1609591792532
+09:45:28 INFO  : Project design_1_wrapper_hw_platform_0's source hardware specification located at E:\DPU_OpenSSD\Baremetal\SDK\design_1_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+09:45:35 INFO  : Copied contents of E:\DPU_OpenSSD\Baremetal\SDK\design_1_wrapper.hdf into \design_1_wrapper_hw_platform_0\system.hdf.
+09:45:51 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+09:46:06 INFO  : 
+09:46:11 INFO  : 
+09:46:12 INFO  : Updating hardware inferred compiler options for DPUTest.
+09:46:13 INFO  : Updating hardware inferred compiler options for DPU.
+09:46:13 INFO  : Clearing existing target manager status.
+09:46:13 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+09:46:19 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+09:49:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:49:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0} -index 0' command is executed.
+09:50:00 ERROR : fpga initialization failed
+09:50:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:50:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0} -index 0' command is executed.
+09:50:22 INFO  : FPGA configured successfully with bitstream "E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+09:50:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:50:31 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+09:50:31 INFO  : 'jtag frequency' command is executed.
+09:50:31 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+09:50:31 INFO  : Context for 'APU' is selected.
+09:50:31 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+09:50:31 INFO  : 'configparams force-mem-access 1' command is executed.
+09:50:31 INFO  : Context for 'APU' is selected.
+09:50:31 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+09:50:32 INFO  : 'psu_init' command is executed.
+09:50:33 INFO  : 'after 1000' command is executed.
+09:50:33 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+09:50:34 INFO  : 'after 1000' command is executed.
+09:50:34 INFO  : 'psu_ps_pl_reset_config' command is executed.
+09:50:34 INFO  : 'catch {psu_protection}' command is executed.
+09:50:34 INFO  : Context for 'APU' is selected.
+09:50:34 INFO  : 32 bit mode is enabled on 'psu_cortexa53_0'
+09:50:35 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+09:50:35 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+09:50:35 INFO  : The application 'E:/DPU_OpenSSD/Baremetal/SDK/DPUTest/Debug/DPUTest.elf' is downloaded to processor 'psu_cortexa53_0'.
+09:50:35 INFO  : 'configparams force-mem-access 0' command is executed.
+09:50:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+enable_a32_mode 0
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -processor
+dow E:/DPU_OpenSSD/Baremetal/SDK/DPUTest/Debug/DPUTest.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+09:50:35 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+09:50:35 INFO  : 'con' command is executed.
+09:50:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+con
+----------------End of Script----------------
+
+09:50:35 INFO  : Launch script is exported to file 'E:\DPU_OpenSSD\Baremetal\SDK\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_dputest.elf_on_local.tcl'
+09:51:07 INFO  : Restoring File Contents to Memory...
+09:51:14 INFO  : Restored Contents to Memory Successfully from File E:\DPU_OpenSSD\Baremetal\Xilinx_DPU_Baremetal\mobilenetv2\binary\input.bin
+09:51:34 INFO  : Restoring File Contents to Memory...
+09:52:00 INFO  : Restored Contents to Memory Successfully from File E:\DPU_OpenSSD\Baremetal\Xilinx_DPU_Baremetal\mobilenetv2\binary\instruction.bin
+09:52:28 INFO  : Restoring File Contents to Memory...
+09:55:54 INFO  : Restored Contents to Memory Successfully from File E:\DPU_OpenSSD\Baremetal\Xilinx_DPU_Baremetal\mobilenetv2\binary\weight.bin
+10:00:32 INFO  : Disconnected from the channel tcfchan#1.
+10:00:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:00:42 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+10:00:42 INFO  : 'jtag frequency' command is executed.
+10:00:42 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+10:00:42 INFO  : Context for 'APU' is selected.
+10:00:42 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+10:00:42 INFO  : 'configparams force-mem-access 1' command is executed.
+10:00:42 INFO  : Context for 'APU' is selected.
+10:00:42 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+10:00:58 ERROR : 'psu_init' is cancelled.
+10:00:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+----------------End of Script----------------
+
+10:00:58 INFO  : Issued abort command to xsdb.
+10:01:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:01:04 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+10:01:04 INFO  : 'jtag frequency' command is executed.
+10:01:04 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+10:01:04 INFO  : Context for 'APU' is selected.
+10:01:04 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+10:01:04 INFO  : 'configparams force-mem-access 1' command is executed.
+10:01:04 INFO  : Context for 'APU' is selected.
+10:01:04 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+10:01:05 INFO  : 'psu_init' command is executed.
+10:01:06 INFO  : 'after 1000' command is executed.
+10:01:06 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+10:01:07 INFO  : 'after 1000' command is executed.
+10:01:08 INFO  : 'psu_ps_pl_reset_config' command is executed.
+10:01:08 INFO  : 'catch {psu_protection}' command is executed.
+10:01:08 INFO  : Context for 'APU' is selected.
+10:01:08 INFO  : 32 bit mode is enabled on 'psu_cortexa53_0'
+10:01:08 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+10:01:08 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+10:01:08 INFO  : The application 'E:/DPU_OpenSSD/Baremetal/SDK/DPUTest/Debug/DPUTest.elf' is downloaded to processor 'psu_cortexa53_0'.
+10:01:08 INFO  : 'configparams force-mem-access 0' command is executed.
+10:01:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+enable_a32_mode 0
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -processor
+dow E:/DPU_OpenSSD/Baremetal/SDK/DPUTest/Debug/DPUTest.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:01:08 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+10:01:08 INFO  : 'con' command is executed.
+10:01:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+con
+----------------End of Script----------------
+
+10:01:08 INFO  : Launch script is exported to file 'E:\DPU_OpenSSD\Baremetal\SDK\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_dputest.elf_on_local.tcl'
+10:01:59 ERROR : (XSDB Server)Memory read error at 0x78300000. APU L2 cache is held in reset
+
+10:02:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:02:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0} -index 0' command is executed.
+10:02:24 INFO  : FPGA configured successfully with bitstream "E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+10:02:30 INFO  : Disconnected from the channel tcfchan#2.
+10:02:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:02:31 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+10:02:31 INFO  : 'jtag frequency' command is executed.
+10:02:31 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+10:02:31 INFO  : Context for 'APU' is selected.
+10:02:31 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+10:02:31 INFO  : 'configparams force-mem-access 1' command is executed.
+10:02:31 INFO  : Context for 'APU' is selected.
+10:02:31 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+10:02:32 INFO  : 'psu_init' command is executed.
+10:02:33 INFO  : 'after 1000' command is executed.
+10:02:33 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+10:02:34 INFO  : 'after 1000' command is executed.
+10:02:34 INFO  : 'psu_ps_pl_reset_config' command is executed.
+10:02:34 INFO  : 'catch {psu_protection}' command is executed.
+10:02:35 INFO  : Context for 'APU' is selected.
+10:02:35 INFO  : 32 bit mode is enabled on 'psu_cortexa53_0'
+10:02:35 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+10:02:35 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+10:02:35 INFO  : The application 'E:/DPU_OpenSSD/Baremetal/SDK/DPUTest/Debug/DPUTest.elf' is downloaded to processor 'psu_cortexa53_0'.
+10:02:35 INFO  : 'configparams force-mem-access 0' command is executed.
+10:02:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+enable_a32_mode 0
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -processor
+dow E:/DPU_OpenSSD/Baremetal/SDK/DPUTest/Debug/DPUTest.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:02:35 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+10:02:35 INFO  : 'con' command is executed.
+10:02:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+con
+----------------End of Script----------------
+
+10:02:35 INFO  : Launch script is exported to file 'E:\DPU_OpenSSD\Baremetal\SDK\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_dputest.elf_on_local.tcl'
+10:08:30 INFO  : Disconnected from the channel tcfchan#3.
+10:08:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:08:31 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+10:08:31 INFO  : 'jtag frequency' command is executed.
+10:08:31 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+10:08:31 INFO  : Context for 'APU' is selected.
+10:08:31 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+10:08:31 INFO  : 'configparams force-mem-access 1' command is executed.
+10:08:31 INFO  : Context for 'APU' is selected.
+10:08:31 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+10:08:52 ERROR : 'psu_init' is cancelled.
+10:08:52 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+----------------End of Script----------------
+
+10:08:52 INFO  : Issued abort command to xsdb.
+10:09:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:09:00 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+10:09:01 INFO  : 'jtag frequency' command is executed.
+10:09:01 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+10:09:01 INFO  : Context for 'APU' is selected.
+10:09:01 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+10:09:01 INFO  : 'configparams force-mem-access 1' command is executed.
+10:09:01 INFO  : Context for 'APU' is selected.
+10:09:01 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+10:09:02 INFO  : 'psu_init' command is executed.
+10:09:03 INFO  : 'after 1000' command is executed.
+10:09:03 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+10:09:04 INFO  : 'after 1000' command is executed.
+10:09:04 INFO  : 'psu_ps_pl_reset_config' command is executed.
+10:09:04 INFO  : 'catch {psu_protection}' command is executed.
+10:09:04 INFO  : Context for 'APU' is selected.
+10:09:04 INFO  : 32 bit mode is enabled on 'psu_cortexa53_0'
+10:09:04 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+10:09:04 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+10:09:05 INFO  : The application 'E:/DPU_OpenSSD/Baremetal/SDK/DPUTest/Debug/DPUTest.elf' is downloaded to processor 'psu_cortexa53_0'.
+10:09:05 INFO  : 'configparams force-mem-access 0' command is executed.
+10:09:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+enable_a32_mode 0
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -processor
+dow E:/DPU_OpenSSD/Baremetal/SDK/DPUTest/Debug/DPUTest.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:09:05 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+10:09:05 INFO  : 'con' command is executed.
+10:09:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+con
+----------------End of Script----------------
+
+10:09:05 INFO  : Launch script is exported to file 'E:\DPU_OpenSSD\Baremetal\SDK\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_dputest.elf_on_local.tcl'
+10:10:58 INFO  : Disconnected from the channel tcfchan#4.
+10:28:44 INFO  : Registering command handlers for SDK TCF services
+10:28:45 INFO  : Launching XSCT server: xsct.bat -interactive E:\DPU_OpenSSD\Baremetal\SDK\temp_xsdb_launch_script.tcl
+10:28:49 INFO  : XSCT server has started successfully.
+10:28:49 INFO  : Successfully done setting XSCT server connection channel  
+10:28:53 INFO  : Successfully done setting SDK workspace  
+10:30:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:31:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:31:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:32:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:33:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:33:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:34:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:34:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:35:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:36:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:37:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:38:08 INFO  : Registering command handlers for SDK TCF services
+10:38:08 INFO  : Launching XSCT server: xsct.bat -interactive E:\DPU_OpenSSD\Baremetal\SDK\temp_xsdb_launch_script.tcl
+10:38:10 INFO  : XSCT server has started successfully.
+10:38:11 INFO  : Successfully done setting XSCT server connection channel  
+10:38:11 INFO  : Successfully done setting SDK workspace  
+10:38:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:38:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0} -index 0' command is executed.
+10:38:29 INFO  : FPGA configured successfully with bitstream "E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+10:38:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:38:53 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+10:38:53 INFO  : 'jtag frequency' command is executed.
+10:38:53 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+10:38:53 INFO  : Context for 'APU' is selected.
+10:38:53 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+10:38:53 INFO  : 'configparams force-mem-access 1' command is executed.
+10:38:54 INFO  : Context for 'APU' is selected.
+10:38:54 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+10:38:55 INFO  : 'psu_init' command is executed.
+10:38:56 INFO  : 'after 1000' command is executed.
+10:38:56 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+10:38:57 INFO  : 'after 1000' command is executed.
+10:38:57 INFO  : 'psu_ps_pl_reset_config' command is executed.
+10:38:57 INFO  : 'catch {psu_protection}' command is executed.
+10:38:57 INFO  : Context for 'APU' is selected.
+10:38:57 INFO  : 32 bit mode is enabled on 'psu_cortexa53_0'
+10:38:57 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+10:38:57 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+10:38:57 INFO  : The application 'E:/DPU_OpenSSD/Baremetal/SDK/DPUTest/Debug/DPUTest.elf' is downloaded to processor 'psu_cortexa53_0'.
+10:38:57 INFO  : 'configparams force-mem-access 0' command is executed.
+10:38:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+enable_a32_mode 0
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -processor
+dow E:/DPU_OpenSSD/Baremetal/SDK/DPUTest/Debug/DPUTest.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:38:58 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+10:38:58 INFO  : 'con' command is executed.
+10:38:58 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+con
+----------------End of Script----------------
+
+10:38:58 INFO  : Launch script is exported to file 'E:\DPU_OpenSSD\Baremetal\SDK\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_dputest.elf_on_local.tcl'
+10:39:25 INFO  : Restoring File Contents to Memory...
+10:39:33 INFO  : Restored Contents to Memory Successfully from File E:\DPU_OpenSSD\Baremetal\Xilinx_DPU_Baremetal\mobilenetv2\binary\input.bin
+10:39:50 INFO  : Restoring File Contents to Memory...
+10:40:17 INFO  : Restored Contents to Memory Successfully from File E:\DPU_OpenSSD\Baremetal\Xilinx_DPU_Baremetal\mobilenetv2\binary\instruction.bin
+10:40:26 INFO  : Restoring File Contents to Memory...
+10:44:01 INFO  : Restored Contents to Memory Successfully from File E:\DPU_OpenSSD\Baremetal\Xilinx_DPU_Baremetal\mobilenetv2\binary\weight.bin
+10:46:24 INFO  : Disconnected from the channel tcfchan#1.
+10:46:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:46:33 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+10:46:34 INFO  : 'jtag frequency' command is executed.
+10:46:34 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+10:46:34 INFO  : Context for 'APU' is selected.
+10:46:34 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+10:46:34 INFO  : 'configparams force-mem-access 1' command is executed.
+10:46:34 INFO  : Context for 'APU' is selected.
+10:46:34 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+10:46:41 ERROR : 'psu_init' is cancelled.
+10:46:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+----------------End of Script----------------
+
+10:46:41 INFO  : Issued abort command to xsdb.
+10:46:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:46:47 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+10:46:47 INFO  : 'jtag frequency' command is executed.
+10:46:47 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+10:46:47 INFO  : Context for 'APU' is selected.
+10:46:47 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+10:46:47 INFO  : 'configparams force-mem-access 1' command is executed.
+10:46:47 INFO  : Context for 'APU' is selected.
+10:46:47 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+10:46:48 INFO  : 'psu_init' command is executed.
+10:46:49 INFO  : 'after 1000' command is executed.
+10:46:49 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+10:46:50 INFO  : 'after 1000' command is executed.
+10:46:50 INFO  : 'psu_ps_pl_reset_config' command is executed.
+10:46:50 INFO  : 'catch {psu_protection}' command is executed.
+10:46:50 INFO  : Context for 'APU' is selected.
+10:46:50 INFO  : 32 bit mode is enabled on 'psu_cortexa53_0'
+10:46:50 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+10:46:50 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+10:46:51 INFO  : The application 'E:/DPU_OpenSSD/Baremetal/SDK/DPUTest/Debug/DPUTest.elf' is downloaded to processor 'psu_cortexa53_0'.
+10:46:51 INFO  : 'configparams force-mem-access 0' command is executed.
+10:46:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+enable_a32_mode 0
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -processor
+dow E:/DPU_OpenSSD/Baremetal/SDK/DPUTest/Debug/DPUTest.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:46:51 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+10:46:51 INFO  : 'con' command is executed.
+10:46:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+con
+----------------End of Script----------------
+
+10:46:51 INFO  : Launch script is exported to file 'E:\DPU_OpenSSD\Baremetal\SDK\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_dputest.elf_on_local.tcl'
+10:47:46 INFO  : Disconnected from the channel tcfchan#3.
+10:47:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:47:56 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+10:47:56 INFO  : 'jtag frequency' command is executed.
+10:47:56 ERROR : 'source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is cancelled.
+10:47:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+----------------End of Script----------------
+
+10:47:56 INFO  : Issued abort command to xsdb.
+10:48:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:48:03 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+10:48:03 INFO  : 'jtag frequency' command is executed.
+10:48:03 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+10:48:03 INFO  : Context for 'APU' is selected.
+10:48:03 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+10:48:03 INFO  : 'configparams force-mem-access 1' command is executed.
+10:48:03 INFO  : Context for 'APU' is selected.
+10:48:03 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+10:48:04 INFO  : 'psu_init' command is executed.
+10:48:05 INFO  : 'after 1000' command is executed.
+10:48:05 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+10:48:06 INFO  : 'after 1000' command is executed.
+10:48:06 INFO  : 'psu_ps_pl_reset_config' command is executed.
+10:48:06 INFO  : 'catch {psu_protection}' command is executed.
+10:48:06 INFO  : Context for 'APU' is selected.
+10:48:06 INFO  : 32 bit mode is enabled on 'psu_cortexa53_0'
+10:48:06 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+10:48:06 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+10:48:07 INFO  : The application 'E:/DPU_OpenSSD/Baremetal/SDK/DPUTest/Debug/DPUTest.elf' is downloaded to processor 'psu_cortexa53_0'.
+10:48:07 INFO  : 'configparams force-mem-access 0' command is executed.
+10:48:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+enable_a32_mode 0
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -processor
+dow E:/DPU_OpenSSD/Baremetal/SDK/DPUTest/Debug/DPUTest.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:48:07 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+10:48:07 INFO  : 'con' command is executed.
+10:48:07 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+con
+----------------End of Script----------------
+
+10:48:07 INFO  : Launch script is exported to file 'E:\DPU_OpenSSD\Baremetal\SDK\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_dputest.elf_on_local.tcl'
+21:51:04 INFO  : Restoring File Contents to Memory...
+21:51:12 INFO  : Restored Contents to Memory Successfully from File E:\DPU_OpenSSD\Baremetal\Xilinx_DPU_Baremetal\mobilenetv2\binary\input.bin
+21:51:23 INFO  : Disconnected from the channel tcfchan#4.
+21:51:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:51:39 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+21:51:39 INFO  : 'jtag frequency' command is executed.
+21:51:39 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+21:51:39 INFO  : Context for 'APU' is selected.
+21:51:40 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+21:51:40 INFO  : 'configparams force-mem-access 1' command is executed.
+21:51:40 INFO  : Context for 'APU' is selected.
+21:51:40 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+21:51:41 INFO  : 'psu_init' command is executed.
+21:51:42 INFO  : 'after 1000' command is executed.
+21:51:42 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+21:51:43 INFO  : 'after 1000' command is executed.
+21:51:43 INFO  : 'psu_ps_pl_reset_config' command is executed.
+21:51:43 INFO  : 'catch {psu_protection}' command is executed.
+21:51:43 INFO  : Context for 'APU' is selected.
+21:51:43 INFO  : 32 bit mode is enabled on 'psu_cortexa53_0'
+21:51:43 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:51:43 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+21:51:44 INFO  : The application 'E:/DPU_OpenSSD/Baremetal/SDK/DPUTest/Debug/DPUTest.elf' is downloaded to processor 'psu_cortexa53_0'.
+21:51:44 INFO  : 'configparams force-mem-access 0' command is executed.
+21:51:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+enable_a32_mode 0
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -processor
+dow E:/DPU_OpenSSD/Baremetal/SDK/DPUTest/Debug/DPUTest.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:51:44 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:51:44 INFO  : 'con' command is executed.
+21:51:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+con
+----------------End of Script----------------
+
+21:51:44 INFO  : Launch script is exported to file 'E:\DPU_OpenSSD\Baremetal\SDK\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_dputest.elf_on_local.tcl'
+19:31:34 INFO  : Launching XSCT server: xsct.bat -interactive E:\DPU_OpenSSD\Baremetal\SDK\temp_xsdb_launch_script.tcl
+19:31:34 INFO  : Registering command handlers for SDK TCF services
+19:31:42 INFO  : XSCT server has started successfully.
+19:31:42 INFO  : Successfully done setting XSCT server connection channel  
+19:31:49 INFO  : Successfully done setting SDK workspace  
+20:04:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:04:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0} -index 0' command is executed.
+20:04:49 INFO  : FPGA configured successfully with bitstream "E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+20:05:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:05:31 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+20:05:31 INFO  : 'jtag frequency' command is executed.
+20:05:31 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+20:05:31 INFO  : Context for 'APU' is selected.
+20:05:31 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+20:05:31 INFO  : 'configparams force-mem-access 1' command is executed.
+20:05:31 INFO  : Context for 'APU' is selected.
+20:05:31 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+20:05:32 INFO  : 'psu_init' command is executed.
+20:05:33 INFO  : 'after 1000' command is executed.
+20:05:33 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+20:05:34 INFO  : 'after 1000' command is executed.
+20:05:35 INFO  : 'psu_ps_pl_reset_config' command is executed.
+20:05:35 INFO  : 'catch {psu_protection}' command is executed.
+20:05:35 INFO  : Context for 'APU' is selected.
+20:05:35 INFO  : 32 bit mode is enabled on 'psu_cortexa53_0'
+20:05:35 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+20:05:35 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+20:05:35 INFO  : The application 'E:/DPU_OpenSSD/Baremetal/SDK/DPUTest/Debug/DPUTest.elf' is downloaded to processor 'psu_cortexa53_0'.
+20:05:35 INFO  : 'configparams force-mem-access 0' command is executed.
+20:05:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+enable_a32_mode 0
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -processor
+dow E:/DPU_OpenSSD/Baremetal/SDK/DPUTest/Debug/DPUTest.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:05:35 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+20:05:35 INFO  : 'con' command is executed.
+20:05:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+con
+----------------End of Script----------------
+
+20:05:35 INFO  : Launch script is exported to file 'E:\DPU_OpenSSD\Baremetal\SDK\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_dputest.elf_on_local.tcl'
+20:06:13 INFO  : Restoring File Contents to Memory...
+20:06:40 INFO  : Restored Contents to Memory Successfully from File E:\DPU_OpenSSD\Baremetal\Xilinx_DPU_Baremetal\mobilenetv2\binary\instruction.bin
+20:06:49 INFO  : Restoring File Contents to Memory...
+20:06:57 INFO  : Restored Contents to Memory Successfully from File E:\DPU_OpenSSD\Baremetal\Xilinx_DPU_Baremetal\mobilenetv2\binary\input.bin
+20:07:23 INFO  : Restoring File Contents to Memory...
+20:10:45 INFO  : Restored Contents to Memory Successfully from File E:\DPU_OpenSSD\Baremetal\Xilinx_DPU_Baremetal\mobilenetv2\binary\weight.bin
+20:15:00 INFO  : Disconnected from the channel tcfchan#1.
+20:15:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:15:10 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+20:15:10 INFO  : 'jtag frequency' command is executed.
+20:15:10 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+20:15:11 INFO  : Context for 'APU' is selected.
+20:15:11 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+20:15:11 INFO  : 'configparams force-mem-access 1' command is executed.
+20:15:11 INFO  : Context for 'APU' is selected.
+20:15:11 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+20:15:20 ERROR : 'psu_init' is cancelled.
+20:15:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+----------------End of Script----------------
+
+20:15:20 INFO  : Issued abort command to xsdb.
+20:15:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:15:25 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+20:15:25 INFO  : 'jtag frequency' command is executed.
+20:15:25 INFO  : Sourcing of 'E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+20:15:25 INFO  : Context for 'APU' is selected.
+20:15:25 INFO  : Hardware design information is loaded from 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf'.
+20:15:25 INFO  : 'configparams force-mem-access 1' command is executed.
+20:15:25 INFO  : Context for 'APU' is selected.
+20:15:25 INFO  : Sourcing of 'E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+20:15:26 INFO  : 'psu_init' command is executed.
+20:15:27 INFO  : 'after 1000' command is executed.
+20:15:27 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+20:15:28 INFO  : 'after 1000' command is executed.
+20:15:28 INFO  : 'psu_ps_pl_reset_config' command is executed.
+20:15:29 INFO  : 'catch {psu_protection}' command is executed.
+20:15:29 INFO  : Context for 'APU' is selected.
+20:15:29 INFO  : 32 bit mode is enabled on 'psu_cortexa53_0'
+20:15:29 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+20:15:29 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+20:15:29 INFO  : The application 'E:/DPU_OpenSSD/Baremetal/SDK/DPUTest/Debug/DPUTest.elf' is downloaded to processor 'psu_cortexa53_0'.
+20:15:29 INFO  : 'configparams force-mem-access 0' command is executed.
+20:15:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/Xilinx2018/SDK/2018.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+loadhw -hw E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+source E:/DPU_OpenSSD/Baremetal/SDK/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+enable_a32_mode 0
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+rst -processor
+dow E:/DPU_OpenSSD/Baremetal/SDK/DPUTest/Debug/DPUTest.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:15:29 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+20:15:29 INFO  : 'con' command is executed.
+20:15:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
+con
+----------------End of Script----------------
+
+20:15:29 INFO  : Launch script is exported to file 'E:\DPU_OpenSSD\Baremetal\SDK\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_dputest.elf_on_local.tcl'

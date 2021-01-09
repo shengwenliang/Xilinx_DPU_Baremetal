@@ -1,0 +1,21 @@
+20:17:13 **** Auto Build of configuration Debug for project DPUTest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 32 Bit gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard -I../../DPU32_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: DPUTest.elf'
+'Invoking: ARM v8 32 Bit gcc linker'
+arm-none-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DPU32_bsp/psu_cortexa53_0/lib -o "DPUTest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -march=armv7-a -mfpu=vfpv3 -mfloat-abi=hard
+'Finished building target: DPUTest.elf'
+' '
+'Invoking: ARM v8 32 Bit Print Size'
+arm-none-eabi-size DPUTest.elf  |tee "DPUTest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72384	   2580	  23328	  98292	  17ff4	DPUTest.elf
+'Finished building: DPUTest.elf.size'
+' '
+
+20:17:13 Build Finished (took 949ms)
+

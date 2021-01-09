@@ -94,8 +94,13 @@ sudo ./memdump2file 0x78700000 4096
 ```
 mrd 0x38700500 16
 ```
-即可读出对应的数值，则可以与output.bin中的数值进行比对。此时baremetal环境下利用DPU运行的过程基本就完成了
+![OUTPUT](./image/output.png)
+即可读出对应的数值，则可以与output.bin中的数值进行比对。此时baremetal环境下利用DPU运行的过程基本就完成了,这里我们可以看到有些数值有点点差别，不过对最终影响不是很大。
 
+## ToDoList
+- [x] 利用程序分析elf文件，直接提取出指令与权重参数，而不是通过jupyter notebook
+- [x] 将提取出的指令与权重参数，放置在SD卡中，利用baremetal直接从SD卡中读取数据
+- [x] 利用PCIe接口等，从上层HOST来写输入，指令与权重参数
 
 
 
